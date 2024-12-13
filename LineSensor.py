@@ -4,11 +4,13 @@
 #
 #  The Line Sensor functionality relies on 2 nested classes. The @c LineSensor class builds out functionality
 #  for one individual sensor, where the @c LineSensorArray class combines 8 LineSensor objects to create functionality
-#  as a singular object. For the @c LineSensor class, the @c update_value method is used to trigger the sensor to take 
+#  as a singular object. The LineSensorArray class assumes that the line sensors are in a horizontal line.
+#  For the @c LineSensor class, the @c update_value() method is used to trigger the sensor to take 
 #  a reading. The @c get_value method returns the most recent reading. The @c LineSensorArray class uses the @c
-#  update_line_position method to return a value between -1 and 1 which represents the position of a line along
-#  the array, zero being centered. In order to do this, readings are linearized and have thresholds applied based
-#  on testing done. The @c get_line_position method returns this value.
+#  update_line_position() method to update the internal line position value based on the readings from the 8 line sensors
+#  This value is between -1 and 1 which represents the position of a line along the array, zero being centered. 
+#  In order to do this, readings are linearized and have thresholds applied based on testing done. 
+#  The @c get_line_position() method returns this value.
 # 
 # 
 #  @author Cole Sterba, Devon Bolt
@@ -35,6 +37,8 @@ import time
 from pyb import Pin, ADC # type: ignore 
 
 class LineSensor:
+    '''!@brief Class for a single line sensor
+    '''
     def __init__(self, Value_pin, LED_pin): 
         """!
         Initializes the LineSensor Object
@@ -95,6 +99,8 @@ class LineSensor:
     
 
 class LineSensorArray:
+    '''!@brief Class for an array of line sensor objects
+    '''
     def __init__(self, Even_pin, Odd_pin, Pin_list): 
         """!
         Initializes the LineSensorArray object by setting up an array of line sensor object.
@@ -286,7 +292,7 @@ class LineSensorArray:
     def centroid(self, readings):
         """
         Calculates the centroid of the readings by finding a weighted sum and dividing it by a regular sum of the readings
-        Returns a value between -1 and 1
+        Returns a value between -1 and 1.
         @param readings: an array of modified sensor readings
         """
         # returns the centroid of the readings 
