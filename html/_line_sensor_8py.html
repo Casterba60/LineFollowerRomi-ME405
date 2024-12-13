@@ -108,14 +108,16 @@ $(function(){initNavTree('_line_sensor_8py.html',''); initResizable(true); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_sensor_1_1_line_sensor.html">LineSensor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for a single line sensor.  <a href="class_line_sensor_1_1_line_sensor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line_sensor_1_1_line_sensor_array.html">LineSensorArray</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for an array of line sensor objects.  <a href="class_line_sensor_1_1_line_sensor_array.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file is the Romi Robot Line Sensor class. </p>
 <p>The Line Sensor is a QTR-8RC Reflectance Sensor. The Class initializes required pins and creates methods required to properly utilize the encoders</p>
-<p>The Line Sensor functionality relies on 2 nested classes. The <code>LineSensor</code> class builds out functionality for one individual sensor, where the <code>LineSensorArray</code> class combines 8 LineSensor objects to create functionality as a singular object. For the <code>LineSensor</code> class, the <code>update_value</code> method is used to trigger the sensor to take a reading. The <code>get_value</code> method returns the most recent reading. The <code>LineSensorArray</code> class uses the <code>update_line_position</code> method to return a value between -1 and 1 which represents the position of a line along the array, zero being centered. In order to do this, readings are linearized and have thresholds applied based on testing done. The <code>get_line_position</code> method returns this value.</p>
+<p>The Line Sensor functionality relies on 2 nested classes. The <code>LineSensor</code> class builds out functionality for one individual sensor, where the <code>LineSensorArray</code> class combines 8 LineSensor objects to create functionality as a singular object. The LineSensorArray class assumes that the line sensors are in a horizontal line. For the <code>LineSensor</code> class, the <code>update_value()</code> method is used to trigger the sensor to take a reading. The <code>get_value</code> method returns the most recent reading. The <code>LineSensorArray</code> class uses the <code>update_line_position()</code> method to update the internal line position value based on the readings from the 8 line sensors This value is between -1 and 1 which represents the position of a line along the array, zero being centered. In order to do this, readings are linearized and have thresholds applied based on testing done. The <code>get_line_position()</code> method returns this value.</p>
 <dl class="section author"><dt>Author</dt><dd>Cole Sterba, Devon Bolt </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-Nov-12 Approximate date of creation of file </dd>
 <dd>

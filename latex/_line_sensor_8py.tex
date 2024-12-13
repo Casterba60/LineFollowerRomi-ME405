@@ -9,9 +9,9 @@ This file is the Romi Robot Line Sensor class.
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_line_sensor_1_1_line_sensor}{Line\+Sensor}}
-\item 
+\begin{DoxyCompactList}\small\item\em Class for a single line sensor. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_line_sensor_1_1_line_sensor_array}{Line\+Sensor\+Array}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Class for an array of line sensor objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -19,7 +19,7 @@ This file is the Romi Robot Line Sensor class.
 
 The Line Sensor is a QTR-\/8\+RC Reflectance Sensor. The Class initializes required pins and creates methods required to properly utilize the encoders
 
-The Line Sensor functionality relies on 2 nested classes. The {\ttfamily Line\+Sensor} class builds out functionality for one individual sensor, where the {\ttfamily Line\+Sensor\+Array} class combines 8 Line\+Sensor objects to create functionality as a singular object. For the {\ttfamily Line\+Sensor} class, the {\ttfamily update\+\_\+value} method is used to trigger the sensor to take a reading. The {\ttfamily get\+\_\+value} method returns the most recent reading. The {\ttfamily Line\+Sensor\+Array} class uses the {\ttfamily update\+\_\+line\+\_\+position} method to return a value between -\/1 and 1 which represents the position of a line along the array, zero being centered. In order to do this, readings are linearized and have thresholds applied based on testing done. The {\ttfamily get\+\_\+line\+\_\+position} method returns this value.
+The Line Sensor functionality relies on 2 nested classes. The {\ttfamily Line\+Sensor} class builds out functionality for one individual sensor, where the {\ttfamily Line\+Sensor\+Array} class combines 8 Line\+Sensor objects to create functionality as a singular object. The Line\+Sensor\+Array class assumes that the line sensors are in a horizontal line. For the {\ttfamily Line\+Sensor} class, the {\ttfamily update\+\_\+value()} method is used to trigger the sensor to take a reading. The {\ttfamily get\+\_\+value} method returns the most recent reading. The {\ttfamily Line\+Sensor\+Array} class uses the {\ttfamily update\+\_\+line\+\_\+position()} method to update the internal line position value based on the readings from the 8 line sensors This value is between -\/1 and 1 which represents the position of a line along the array, zero being centered. In order to do this, readings are linearized and have thresholds applied based on testing done. The {\ttfamily get\+\_\+line\+\_\+position()} method returns this value.
 
 \begin{DoxyAuthor}{Author}
 Cole Sterba, Devon Bolt 

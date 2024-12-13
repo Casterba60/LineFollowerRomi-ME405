@@ -32,7 +32,7 @@ import time
 from pyb import I2C # type: ignore 
 
 class BNO055:
-    '''!@Brief Class to control and communicate with a BNO055 IMU'''
+    '''!@brief Class to control and communicate with a BNO055 IMU'''
     # BNO055 default I2C address and register addresses
     BNO055_I2C_ADDR = 0x28
     BNO055_OPR_MODE_ADDR = 0x3D
