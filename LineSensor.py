@@ -50,12 +50,15 @@ class LineSensor:
         self.update_value()
 
     def update_value(self):
-        # reads the analog value of the line sensor
-        # Step 1: Turn LED On
-        # Step 2: Set Value_Pin to output and drive it high for at least 10us
-        # Step 3: Set Value_Pin to input and measure the time it takes to decay
-        # Step 4: turn LED off
-        # sets internal value parameter to the decay time of cap in sensor in a double from 0-1
+        """ 
+        reads the analog value of the line sensor
+        Step 1: Turn the LED On
+        Step 2: Set the Value_Pin to an output and drive it high for at least 10 microseconds
+        Step 3: Set the Value_Pin to an input and measure the time it takes to decay in microseconds. Decay time is capped by the internal parameter MAX_DECAY_TIME
+        Step 4: Turn LED off
+        Step 5: Sets the internal VALUE parameter to the measured decay time
+        """
+        
         self.LED_PIN.high() # Step 1
 
         self.VALUE_PIN = Pin(self.VALUE_PIN_NUMBER, mode=Pin.OUT_PP) # Step 2
@@ -83,6 +86,9 @@ class LineSensor:
         self.LED_PIN.low() # Step 4
 
     def get_value(self):
+        """
+        Updates the value of the sensor and then returns it
+        """
         self.update_value()
         # Returns the current value of the line sensor
         return self.VALUE
@@ -92,7 +98,8 @@ class LineSensorArray:
     def __init__(self, Even_pin, Odd_pin, Pin_list): 
         """!
         Initializes the LineSensorArray Object
-        @param Line_Sensor_Array: an array of LineSensor objects
+        @param Even_pin: Pin to control the even number line sensor array LEDs
+        @param Odd_pin: Pin to control the odd number line sensor array LEDs
         """
         self.SENSOR_LIST = [LineSensor(Pin_list[0], Even_pin), 
                             LineSensor(Pin_list[1], Odd_pin),
