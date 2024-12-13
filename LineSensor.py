@@ -1,3 +1,36 @@
+## @file LineSensor.py
+#  This file is the Romi Robot Line Sensor class. The Line Sensor is a QTR-8RC Reflectance Sensor.
+#  The Class initializes required pins and creates methods required to properly utilize the encoders
+#
+#  The Line Sensor functionality relies on 2 nested classes. The @c LineSensor class builds out functionality
+#  for one individual sensor, where the @c LineSensorArray class combines 8 LineSensor objects to create functionality
+#  as a singular object. For the @c LineSensor class, the @c update_value method is used to trigger the sensor to take 
+#  a reading. The @c get_value method returns the most recent reading. The @c LineSensorArray class uses the @c
+#  update_line_position method to return a value between -1 and 1 which represents the position of a line along
+#  the array, zero being centered. In order to do this, readings are linearized and have thresholds applied based
+#  on testing done. The @c get_line_position method returns this value.
+# 
+# 
+#  @author Cole Sterba, Devon Bolt
+#  @date   2024-Nov-12 Approximate date of creation of file
+#  @date   2024-Dec-12 Final tuning completed
+#  @copyright This program is copyright (c) 2024 by C Sterba and D Bolt and
+#             released under the GNU Public License, version 3.0.
+# 
+#  It is intended for educational use only, but its use is not limited thereto.
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+#  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+#  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+#  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+#  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+#  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+#  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+#  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+#  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+#  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+#  POSSIBILITY OF SUCH DAMAGE.
+
+
 import time
 from pyb import Pin, ADC # type: ignore 
 

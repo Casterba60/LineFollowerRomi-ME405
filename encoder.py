@@ -1,23 +1,32 @@
-'''!@file encoder.py
-@brief 
-The encoder object is used to control the encoders on Amtek PG6712A077-R3 Motors
-@details
-
-@author Cole Sterba, Devon Bolt
-@date October 17, 2024
-
-@ TO DO
-need to make the encoder class update function on the scheduler... 
-
-
-
-# Encoder Signal |   Recommeneded CPU Pin (any timer can be used)      
-#   ENC1_A       |   PB_6             
-#   ENC1_B       |   PB_7                   
-#   ENC2_A       |   PA_8             
-#   ENC2_B       |   PA_9            
- 
-'''
+## @file encoder.py
+#  This file is the Romi Robot encoder class, initializing required pins and creating 
+#  methods required to properly utilize the encoders
+#
+#  Channel A and Channel B are connected to GPIO pins in order to allow the microchip to 
+#  read the output signals of the encoders and increment a timer register. Power and ground 
+#  are linked to their respective buses. The @c update function runs as a generator function in
+#  the scheduler, allowing it to update every 20ms (can be changed). The @c get_delta function 
+#  returns the last increment made to the encoder. The @c get_position function returns the current
+#  position of the encoder. The @c zero function zeroes the position of the encoder. 
+# 
+#  @author Cole Sterba, Devon Bolt
+#  @date   2024-Nov-12 Approximate date of creation of file
+#  @date   2024-Dec-12 Final tuning completed
+#  @copyright This program is copyright (c) 2024 by C Sterba and D Bolt and
+#             released under the GNU Public License, version 3.0.
+# 
+#  It is intended for educational use only, but its use is not limited thereto.
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+#  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+#  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+#  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+#  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+#  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+#  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+#  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+#  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+#  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+#  POSSIBILITY OF SUCH DAMAGE.
 
 from pyb import Pin, Timer #type: ignore
 import time

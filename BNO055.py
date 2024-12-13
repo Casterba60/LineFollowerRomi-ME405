@@ -1,3 +1,33 @@
+## @file BNO055.py
+#  This file is the class for the BNO055 IMU sensor, it instantiates the required pins as 
+#  well as the I2C bus required for commmunication
+#
+#  The BNO055 IMU provides access to Euler Angles, Heading, Quaternion, and Euler Rates. It
+#  is communicated with through an I2C bus. The @c write_byte and @c read_byte methods facilitate 
+#  this communication, which the higher level methods use these to read and write calibration 
+#  values use. The mode determines the functionality of the sensor, and is set through the @_set_mode
+#  method. 
+#
+#  @author Cole Sterba, Devon Bolt
+#  @date   2024-Nov-12 Approximate date of creation of file
+#  @date   2024-Dec-12 Final tuning completed
+#  @copyright This program is copyright (c) 2024 by C Sterba and D Bolt and
+#             released under the GNU Public License, version 3.0.
+# 
+#  It is intended for educational use only, but its use is not limited thereto.
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+#  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+#  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+#  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+#  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+#  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+#  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+#  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+#  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+#  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+#  POSSIBILITY OF SUCH DAMAGE.
+
+
 import time
 from pyb import I2C # type: ignore 
 

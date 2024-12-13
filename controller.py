@@ -1,8 +1,31 @@
-# Mechantronics 405 PI controller class
-# Cole Sterba Devon Bolt
-
-#NOTES:
-#Add derivative control
+## @file controller.py
+#  This file is the Romi Robot motor controller, implementing a PI controller based
+#  on the output from the built in encoders
+#
+#  the @c run function is the main component of the controller class, which takes readings
+#  from the encoder as well as time passed to calculate proportional and integral error 
+#  over time. These errors are multiplied by their respective gains to get the output for 
+#  motor duty cycle. the @c setSpeed function allows the alteration of the desired speed from 
+#  which error is calculated.  
+# 
+#  @author Cole Sterba, Devon Bolt
+#  @date   2024-Nov-12 Approximate date of creation of file
+#  @date   2024-Dec-12 Final tuning completed
+#  @copyright This program is copyright (c) 2024 by C Sterba and D Bolt and
+#             released under the GNU Public License, version 3.0.
+# 
+#  It is intended for educational use only, but its use is not limited thereto.
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+#  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+#  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+#  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+#  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+#  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+#  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+#  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+#  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+#  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+#  POSSIBILITY OF SUCH DAMAGE.
 
 import time
 import pyb #type: ignore

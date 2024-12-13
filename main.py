@@ -1,31 +1,35 @@
-'''!@file 
-main.py
-@brief 
-This project aimed to follow a line while avoiding physical obstacles and returning to home at the finish
-@details
+## @file main.py
+#  This file is the main file, containing all needed dependencies, initializing all
+#  required objects as well as the scheduler
+#
+#  This program is built on the micropython library. All required Romi objects, which 
+#  include: 2 motors, 2 encoders, 2 motor controllers, 1 IR sensor array containing 
+#  8 IR sensors, a 6 sensor bump sensor array, and 1 IMU are instantiated in this file. 
+#  The details of each of these objects is detailed in their respective files
+#  These objects are all intregated into a set of tasks which run on the scheduler.
+#  These tasks are: The overacrching Finite State Machine, updating the encoder positions,
+#  and running the individual motor controllers 
+# 
+#  @author Cole Sterba, Devon Bolt
+#  @date   2024-Nov-25 Approximate date of creation of file
+#  @date   2024-Dec-12 Final tuning completed
+#  @copyright This program is copyright (c) 2024 by C Sterba and D Bolt and
+#             released under the GNU Public License, version 3.0.
+# 
+#  It is intended for educational use only, but its use is not limited thereto.
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+#  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+#  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+#  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+#  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+#  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+#  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+#  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+#  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+#  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+#  POSSIBILITY OF SUCH DAMAGE.
 
-@authors
-Cole Sterba, Devon Bolt
-@date last modified 
-December 9, 2024
-
-# L6206 Signal   | Morpho Pin Number | CPU Pin
-#   EN_A         |  CN10-33          | PA_10   
-#   IN1_A        |  CN10-27          | PB_4          
-#   IN2_A        |  CN10-29          | PB_5
-#   EN_B         |  CN7-36           | PC_1
-#   IN1_B        |  CN7-28           | PA_0
-#   IN2_B        |  CN7-30           | PA_1
-
-# Encoder Signal |   CPU Pin              
-#   ENC1_A       |   PB_6             
-#   ENC1_B       |   PB_7                   
-#   ENC2_A       |   PA_8             
-#   ENC2_B       |   PA_9            
- 
-'''
-
-'''LIBRARIES'''
+#Import necessary libraries
 import pyb #type: ignore
 import time
 import gc
@@ -153,6 +157,7 @@ if __name__ == '__main__':
 
     #test_imu(imu)
 
+    #Create tasks with generator functions
     UpdateLeftEncoderTask = cotask.Task(left_Encoder.update,name="Update Left Encoder", priority=1, period=ENCPERIOD,
                         profile=True, trace=False)
     UpdateRightEncoderTask = cotask.Task(right_Encoder.update,name="Update Right Encoder", priority=1, period=ENCPERIOD,
@@ -161,12 +166,13 @@ if __name__ == '__main__':
     LeftMotorController = cotask.Task(left_Controller.run,name="Left Controller", priority=1, period=CONTPERIOD,profile=True,trace=True)
     FSM = cotask.Task(romi_obj.FSM,name="FSM control",priority=0,period=FSMPERIOD,profile=True,trace=False)
 
+    #Append Tasks to IMU
     cotask.task_list.append(UpdateRightEncoderTask)
     cotask.task_list.append(UpdateLeftEncoderTask)
     cotask.task_list.append(RightMotorController)
     cotask.task_list.append(LeftMotorController)
     cotask.task_list.append(FSM)
-
+    #run garbage collector
     gc.collect()
 
     # Run the scheduler with the chosen scheduling algorithm. Quit if ^C pressed

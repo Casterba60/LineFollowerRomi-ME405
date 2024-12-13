@@ -1,5 +1,44 @@
-# Mechantronics 405 Final Project State Machine
-# Cole Sterba, Devon Bolt
+## @file statemachine.py
+#  This file is the finite state machine used to drive the Romi robot for line following, 
+#  obstacle avoidance, and return to home objectives.
+#
+#  The state machine was implemented as a class to allow its primary method, @c FSM, to operate 
+#  with access to all the required objects. The first state is nitialization, which allows for 
+#  all objects to finish their own initialization. State 0 transitions to state 1 after 1 loop.
+#  State 1 is the idle state, here Romi will wait for a push of the onboard blue button to begin
+#  running its course. The transition to state 2 occurs when the button is pushed. State 2 is the 
+#  line following algorithm. It takes the output of the @c LineSensorArray object and multiplies it
+#  by a set gain, and then drives the motors via the controller to stay lined up with the line. 
+#  Upon a collision, which the program is constantly checking for in state 2, the state transitions to 
+#  state 3. State 3 is the obstacle avoidance state, which drives a set trajectory to navigate around the 
+#  box. The robot stays on this trajectory by both tracking position with encoder position as well as 
+#  aligning and tracking heading change with the IMU. With the last straight line driven by state 3, the
+#  program checks for a line detection, which triggers the program to shift back to state 2. State 2,
+#  knowing it has already passed the obstacle, now searches for the perpendicular black line which 
+#  will be the beginning to the finish line box. This then triggers the transition to state 4, which is 
+#  return to home. This state knows the initial heading, gathered in the beginning of the program, as well
+#  as the distance back to the start box. With these two pieces of information the robot returns to the start
+#  box and upon returning, it transitions back to state 1 (idle).
+#
+#  @author Cole Sterba, Devon Bolt
+#  @date   2024-Nov-12 Approximate date of creation of file
+#  @date   2024-Dec-12 Final tuning completed
+#  @copyright This program is copyright (c) 2024 by C Sterba and D Bolt and
+#             released under the GNU Public License, version 3.0.
+# 
+#  It is intended for educational use only, but its use is not limited thereto.
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+#  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+#  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+#  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+#  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+#  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+#  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+#  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+#  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+#  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+#  POSSIBILITY OF SUCH DAMAGE.
+
 
 import time
 import pyb #type: ignore
