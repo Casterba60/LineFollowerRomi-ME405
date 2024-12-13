@@ -62,6 +62,12 @@ class statemachine:
 
 
     def FSM(self):
+        """ Finite State Machine Generator Task:
+            State 1: Initialization 
+            State 2: Idle - Wait for button push
+            State 3: Line Following
+            State 4: Obstacle Avoidance
+            State 5: Return to Base"""
         nominalSpeed = 5; #rad/s
         obstaclePassed = False
         state = 0
@@ -292,6 +298,8 @@ class statemachine:
             yield
 
     def headingControl(self,desiredHeading,velocity,gain=1/15):
+        """Drive motor speeds to maintain heading and correct for error (Proportional Control)
+        """
         error = desiredHeading - self.imu.get_heading()
         if(error > 180): error -= 360
         if(error < -180): error += 360

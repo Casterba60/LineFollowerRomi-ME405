@@ -41,6 +41,7 @@ class controller:
         self.refSpeed = 0.0
 
     def run(self):
+        '''Run the PI motor controller using input from encoder'''
         Kp = 7 #proportional motor gain
         Ki = 7 #integral motor gain
         integral_error = 0 #integral error
@@ -64,9 +65,11 @@ class controller:
             yield 0
     
     def setSpeed(self,desiredSpeed):
+        '''Set the desired speed for the controller'''
         self.refSpeed = desiredSpeed
 
     def getEncoderPos(self):
+        '''Return the raw encoder position from the encoder obj'''
         return self.encoder.get_position()
 
         
