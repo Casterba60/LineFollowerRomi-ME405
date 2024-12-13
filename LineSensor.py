@@ -97,9 +97,10 @@ class LineSensor:
 class LineSensorArray:
     def __init__(self, Even_pin, Odd_pin, Pin_list): 
         """!
-        Initializes the LineSensorArray Object
+        Initializes the LineSensorArray object by setting up an array of line sensor object.
         @param Even_pin: Pin to control the even number line sensor array LEDs
         @param Odd_pin: Pin to control the odd number line sensor array LEDs
+        @param Pin_List: Ordered list of the analog output pins of the line sensor array
         """
         self.SENSOR_LIST = [LineSensor(Pin_list[0], Even_pin), 
                             LineSensor(Pin_list[1], Odd_pin),
@@ -114,6 +115,9 @@ class LineSensorArray:
         self.ALL_ON_PERCENT = 0.85 # if more than this percent of the sum of the sensor readings, horizontal line hit
 
     def get_line_position(self):
+        """
+        Updates the line position using the internal update_line_position() function then returns the value
+        """
         self.update_line_position()
 
         # Under normal operation value between -1 and 1. -1 is left, 1 is right
@@ -121,9 +125,15 @@ class LineSensorArray:
         return self.LINE_POSITION 
 
     def update_line_position(self):
-        # Under normal operation, value between -1 and 1. -1 is left, 1 is right
-        # value set to 2 if all sensors are tripped (for finish detection)
-
+        """
+        Reads the value from all 8 LineSensor objects. 
+        Uses custom calibration data to linearize, threshold, and normalize the values for each LineSensor.
+        Creates an array with the modified LineSensor readings.
+        Finds the centroid of the values and returns that as a value between -1 and 1.
+        Negative values represent the line being to the left of the robot and Positive values represent the line being to the right.
+        In the case that no line is detected, outputs 0.
+        In the event that most of the sensors detect strongly (a horizontal line is detected), outputs 2
+        """
         readings = []
         readings_total = 0
         for i in range(self.NUM_SENSORS):
@@ -140,7 +150,11 @@ class LineSensorArray:
             self.LINE_POSITION = self.centroid(readings)
 
     def threshold_linear(self, sensor_reading, sensor):
-        # returns a linearized and thresholded value based on calibration data
+        """
+        @param sensor_reading: A LineSensor reading (values from 0-MAX_DECAY_TIME)
+        @param sensor: the number of the sensor the reading came from. Used for specific calibration.
+        Returns a linearized and thresholded value based on calibration data
+        """
         if(sensor==0):
             if(sensor_reading<600):
                 modified_reading = 0
@@ -217,13 +231,20 @@ class LineSensorArray:
         return modified_reading
     
     def third_order(self, x, a, b, c, d):
-        # Calculates the output of a third order polynomial with given parameters
+        """
+        NOTE: UNUSED
+        Calculates the result of a third order polynomial. 
+        Was going to be used for more specific linearization of the line sensors but ended up being unhelpful.
+        """
         return (a*(x**3) + b*(x**2) + c*x + d)
 
 
     def linearize(self, value, sensor):
-        # returns a linearized version of the reading based on calibration data for each specific sensor
-        # each sensor is calibrated and fit to a third order polynomial
+        """
+        NOTE: UNUSED
+        Linearizes the line sensor readings based on third order approximations of their calibration data.
+        Not fully implemented.
+        """
         if(sensor==0):
             linear_reading = self.third_order(value, 1.37*(10**(-6)), -5.72*(10**(-3)), 8.32, -2.72*(10**(3)))
         elif(sensor==1):
@@ -245,8 +266,12 @@ class LineSensorArray:
         
 
     def threshold(self, linear_reading):
-        # returns a discretized and normalized version of the input linearized reading
-        # scale is 0 -> line sensor max decay time
+        """
+        NOTE: UNUSED
+        Returns a discretized and normalized version of the input linearized reading
+        Scale is 0 -> line sensor MAX_DECAY_TIME
+        """
+        
         time_min = 0
         time_max = self.SENSOR_LIST[0].MAX_DECAY_TIME
         steps = 4
@@ -259,6 +284,11 @@ class LineSensorArray:
         return block # discrete value between 0 and 1
 
     def centroid(self, readings):
+        """
+        @param readings: an array of modified sensor readings
+        Calculates the centroid of the readings by finding a weighted sum and dividing it by a regular sum of the readings
+        Returns a value between -1 and 1
+        """
         # returns the centroid of the readings 
         weighted_sum = 0
         sum = 0
