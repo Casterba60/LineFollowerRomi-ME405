@@ -65,7 +65,8 @@ class controller:
             yield 0
     
     def setSpeed(self,desiredSpeed):
-        '''Set the desired speed for the controller'''
+        '''Set the desired speed for the controller
+        @param desiredSpeed the speed the motor should drive to'''
         self.refSpeed = desiredSpeed
 
     def getEncoderPos(self):

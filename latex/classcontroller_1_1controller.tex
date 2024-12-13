@@ -6,14 +6,11 @@
 \Hypertarget{classcontroller_1_1controller_af7af2dc9defd1d96f21d84aad22add86}\label{classcontroller_1_1controller_af7af2dc9defd1d96f21d84aad22add86} 
 {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, motor, encoder, ENC\+\_\+\+PERIOD)
 \item 
-\Hypertarget{classcontroller_1_1controller_a08060e0924949738f75a0cdd8b49cef4}\label{classcontroller_1_1controller_a08060e0924949738f75a0cdd8b49cef4} 
-{\bfseries run} (self)
+\mbox{\hyperlink{classcontroller_1_1controller_a08060e0924949738f75a0cdd8b49cef4}{run}} (self)
 \item 
-\Hypertarget{classcontroller_1_1controller_acc48dd3bf9973772036913b7d53aab5c}\label{classcontroller_1_1controller_acc48dd3bf9973772036913b7d53aab5c} 
-{\bfseries set\+Speed} (self, desired\+Speed)
+\mbox{\hyperlink{classcontroller_1_1controller_acc48dd3bf9973772036913b7d53aab5c}{set\+Speed}} (self, desired\+Speed)
 \item 
-\Hypertarget{classcontroller_1_1controller_ac2979b17e2dee3a1b1b9b889a0aaa2c0}\label{classcontroller_1_1controller_ac2979b17e2dee3a1b1b9b889a0aaa2c0} 
-{\bfseries get\+Encoder\+Pos} (self)
+\mbox{\hyperlink{classcontroller_1_1controller_ac2979b17e2dee3a1b1b9b889a0aaa2c0}{get\+Encoder\+Pos}} (self)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
@@ -37,6 +34,30 @@ int {\bfseries ref\+Speed} = 0
 float {\bfseries measured\+Speed} = self.\+encoder.\+get\+\_\+delta()\texorpdfstring{$\ast$}{*}4.\+3633/self.\+ENC\+\_\+\+PERIOD
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcontroller_1_1controller_ac2979b17e2dee3a1b1b9b889a0aaa2c0}\index{controller@{controller}!getEncoderPos@{getEncoderPos}}
+\index{getEncoderPos@{getEncoderPos}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{getEncoderPos()}{getEncoderPos()}}
+{\footnotesize\ttfamily \label{classcontroller_1_1controller_ac2979b17e2dee3a1b1b9b889a0aaa2c0} 
+get\+Encoder\+Pos (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the raw encoder position from the encoder obj\end{DoxyVerb}
+ \Hypertarget{classcontroller_1_1controller_a08060e0924949738f75a0cdd8b49cef4}\index{controller@{controller}!run@{run}}
+\index{run@{run}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{classcontroller_1_1controller_a08060e0924949738f75a0cdd8b49cef4} 
+run (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run the PI motor controller using input from encoder\end{DoxyVerb}
+ \Hypertarget{classcontroller_1_1controller_acc48dd3bf9973772036913b7d53aab5c}\index{controller@{controller}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily \label{classcontroller_1_1controller_acc48dd3bf9973772036913b7d53aab5c} 
+set\+Speed (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{desired\+Speed}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the desired speed for the controller\end{DoxyVerb}
+ 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

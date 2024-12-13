@@ -6,11 +6,9 @@
 \Hypertarget{classstatemachine_1_1statemachine_a9e0332aa69b004e0f4135fe7b2f7ebec}\label{classstatemachine_1_1statemachine_a9e0332aa69b004e0f4135fe7b2f7ebec} 
 {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, left\+\_\+controller, right\+\_\+controller, IMU, button\+Status, line\+Array, obstacle\+Detection)
 \item 
-\Hypertarget{classstatemachine_1_1statemachine_a9add9e75dcad4c1273cc11614fd74dd0}\label{classstatemachine_1_1statemachine_a9add9e75dcad4c1273cc11614fd74dd0} 
-{\bfseries FSM} (self)
+\mbox{\hyperlink{classstatemachine_1_1statemachine_a9add9e75dcad4c1273cc11614fd74dd0}{FSM}} (self)
 \item 
-\Hypertarget{classstatemachine_1_1statemachine_a5e57d80bdddbc273cac90383bb9c18c5}\label{classstatemachine_1_1statemachine_a5e57d80bdddbc273cac90383bb9c18c5} 
-{\bfseries heading\+Control} (self, desired\+Heading, velocity, gain=1/15)
+\mbox{\hyperlink{classstatemachine_1_1statemachine_a5e57d80bdddbc273cac90383bb9c18c5}{heading\+Control}} (self, desired\+Heading, velocity, gain=1/15)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
@@ -85,6 +83,29 @@ int {\bfseries previous\+Position} = 65536
 int {\bfseries straight\+Heading} = 4
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classstatemachine_1_1statemachine_a9add9e75dcad4c1273cc11614fd74dd0}\index{statemachine@{statemachine}!FSM@{FSM}}
+\index{FSM@{FSM}!statemachine@{statemachine}}
+\doxysubsubsection{\texorpdfstring{FSM()}{FSM()}}
+{\footnotesize\ttfamily \label{classstatemachine_1_1statemachine_a9add9e75dcad4c1273cc11614fd74dd0} 
+FSM (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Finite State Machine Generator Task:
+    State 1: Initialization 
+    State 2: Idle - Wait for button push
+    State 3: Line Following
+    State 4: Obstacle Avoidance
+    State 5: Return to Base\end{DoxyVerb}
+ \Hypertarget{classstatemachine_1_1statemachine_a5e57d80bdddbc273cac90383bb9c18c5}\index{statemachine@{statemachine}!headingControl@{headingControl}}
+\index{headingControl@{headingControl}!statemachine@{statemachine}}
+\doxysubsubsection{\texorpdfstring{headingControl()}{headingControl()}}
+{\footnotesize\ttfamily \label{classstatemachine_1_1statemachine_a5e57d80bdddbc273cac90383bb9c18c5} 
+heading\+Control (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{desired\+Heading}{, }\item[{}]{velocity}{, }\item[{}]{gain}{ = {\ttfamily 1/15}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Drive motor speeds to maintain heading and correct for error (Proportional Control)
+\end{DoxyVerb}
+ 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

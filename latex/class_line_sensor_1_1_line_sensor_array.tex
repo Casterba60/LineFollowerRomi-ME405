@@ -4,27 +4,20 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_line_sensor_1_1_line_sensor_array_a384b4d6227abec6ba9051d4f7eccd9b4}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Even\+\_\+pin, Odd\+\_\+pin, Pin\+\_\+list)
-\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_line_sensor_1_1_line_sensor_array}{Line\+Sensor\+Array} Object. \end{DoxyCompactList}\item 
-\Hypertarget{class_line_sensor_1_1_line_sensor_array_a9f637a1988d9d38558869a5920d5d824}\label{class_line_sensor_1_1_line_sensor_array_a9f637a1988d9d38558869a5920d5d824} 
-{\bfseries get\+\_\+line\+\_\+position} (self)
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_line_sensor_1_1_line_sensor_array}{Line\+Sensor\+Array} object by setting up an array of line sensor object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_line_sensor_1_1_line_sensor_array_a9f637a1988d9d38558869a5920d5d824}{get\+\_\+line\+\_\+position}} (self)
 \item 
-\Hypertarget{class_line_sensor_1_1_line_sensor_array_ad0565eecb5e431630081a6ed0f440abc}\label{class_line_sensor_1_1_line_sensor_array_ad0565eecb5e431630081a6ed0f440abc} 
-{\bfseries update\+\_\+line\+\_\+position} (self)
+\mbox{\hyperlink{class_line_sensor_1_1_line_sensor_array_ad0565eecb5e431630081a6ed0f440abc}{update\+\_\+line\+\_\+position}} (self)
 \item 
-\Hypertarget{class_line_sensor_1_1_line_sensor_array_a63d63e49b7e1d2b568412e48acaf5715}\label{class_line_sensor_1_1_line_sensor_array_a63d63e49b7e1d2b568412e48acaf5715} 
-{\bfseries threshold\+\_\+linear} (self, sensor\+\_\+reading, sensor)
+\mbox{\hyperlink{class_line_sensor_1_1_line_sensor_array_a63d63e49b7e1d2b568412e48acaf5715}{threshold\+\_\+linear}} (self, sensor\+\_\+reading, sensor)
 \item 
-\Hypertarget{class_line_sensor_1_1_line_sensor_array_aea18af444930d78a1d4855accab74926}\label{class_line_sensor_1_1_line_sensor_array_aea18af444930d78a1d4855accab74926} 
-{\bfseries third\+\_\+order} (self, x, a, b, c, d)
+\mbox{\hyperlink{class_line_sensor_1_1_line_sensor_array_aea18af444930d78a1d4855accab74926}{third\+\_\+order}} (self, x, a, b, c, d)
 \item 
-\Hypertarget{class_line_sensor_1_1_line_sensor_array_aac9384d4a6c42439b76f2aceb6a6ce01}\label{class_line_sensor_1_1_line_sensor_array_aac9384d4a6c42439b76f2aceb6a6ce01} 
-{\bfseries linearize} (self, value, sensor)
+\mbox{\hyperlink{class_line_sensor_1_1_line_sensor_array_aac9384d4a6c42439b76f2aceb6a6ce01}{linearize}} (self, value, sensor)
 \item 
-\Hypertarget{class_line_sensor_1_1_line_sensor_array_ad54792d41f5676ee4038be95d0482e5d}\label{class_line_sensor_1_1_line_sensor_array_ad54792d41f5676ee4038be95d0482e5d} 
-{\bfseries threshold} (self, linear\+\_\+reading)
+\mbox{\hyperlink{class_line_sensor_1_1_line_sensor_array_ad54792d41f5676ee4038be95d0482e5d}{threshold}} (self, linear\+\_\+reading)
 \item 
-\Hypertarget{class_line_sensor_1_1_line_sensor_array_a161cafd55645730c0af4e889cdc9c8d1}\label{class_line_sensor_1_1_line_sensor_array_a161cafd55645730c0af4e889cdc9c8d1} 
-{\bfseries centroid} (self, readings)
+\mbox{\hyperlink{class_line_sensor_1_1_line_sensor_array_a161cafd55645730c0af4e889cdc9c8d1}{centroid}} (self, readings)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
@@ -51,14 +44,93 @@ float {\bfseries ALL\+\_\+\+ON\+\_\+\+PERCENT} = 0.\+85
 
 
 
-Initializes the \doxylink{class_line_sensor_1_1_line_sensor_array}{Line\+Sensor\+Array} Object. 
+Initializes the \doxylink{class_line_sensor_1_1_line_sensor_array}{Line\+Sensor\+Array} object by setting up an array of line sensor object. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em Line\+\_\+\+Sensor\+\_\+\+Array} & an array of \doxylink{class_line_sensor_1_1_line_sensor}{Line\+Sensor} objects \\
+{\em Even\+\_\+pin} & Pin to control the even number line sensor array LEDs \\
+\hline
+{\em Odd\+\_\+pin} & Pin to control the odd number line sensor array LEDs \\
+\hline
+{\em Pin\+\_\+\+List} & Ordered list of the analog output pins of the line sensor array \\
 \hline
 \end{DoxyParams}
 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_a161cafd55645730c0af4e889cdc9c8d1}\index{LineSensorArray@{LineSensorArray}!centroid@{centroid}}
+\index{centroid@{centroid}!LineSensorArray@{LineSensorArray}}
+\doxysubsubsection{\texorpdfstring{centroid()}{centroid()}}
+{\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_array_a161cafd55645730c0af4e889cdc9c8d1} 
+centroid (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{readings}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param readings: an array of modified sensor readings
+Calculates the centroid of the readings by finding a weighted sum and dividing it by a regular sum of the readings
+Returns a value between -1 and 1
+\end{DoxyVerb}
+ \Hypertarget{class_line_sensor_1_1_line_sensor_array_a9f637a1988d9d38558869a5920d5d824}\index{LineSensorArray@{LineSensorArray}!get\_line\_position@{get\_line\_position}}
+\index{get\_line\_position@{get\_line\_position}!LineSensorArray@{LineSensorArray}}
+\doxysubsubsection{\texorpdfstring{get\_line\_position()}{get\_line\_position()}}
+{\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_array_a9f637a1988d9d38558869a5920d5d824} 
+get\+\_\+line\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Updates the line position using the internal update_line_position() function then returns the value
+\end{DoxyVerb}
+ \Hypertarget{class_line_sensor_1_1_line_sensor_array_aac9384d4a6c42439b76f2aceb6a6ce01}\index{LineSensorArray@{LineSensorArray}!linearize@{linearize}}
+\index{linearize@{linearize}!LineSensorArray@{LineSensorArray}}
+\doxysubsubsection{\texorpdfstring{linearize()}{linearize()}}
+{\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_array_aac9384d4a6c42439b76f2aceb6a6ce01} 
+linearize (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{value}{, }\item[{}]{sensor}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}NOTE: UNUSED
+Linearizes the line sensor readings based on third order approximations of their calibration data.
+Not fully implemented.
+\end{DoxyVerb}
+ \Hypertarget{class_line_sensor_1_1_line_sensor_array_aea18af444930d78a1d4855accab74926}\index{LineSensorArray@{LineSensorArray}!third\_order@{third\_order}}
+\index{third\_order@{third\_order}!LineSensorArray@{LineSensorArray}}
+\doxysubsubsection{\texorpdfstring{third\_order()}{third\_order()}}
+{\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_array_aea18af444930d78a1d4855accab74926} 
+third\+\_\+order (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{x}{, }\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{c}{, }\item[{}]{d}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}NOTE: UNUSED
+Calculates the result of a third order polynomial. 
+Was going to be used for more specific linearization of the line sensors but ended up being unhelpful.
+\end{DoxyVerb}
+ \Hypertarget{class_line_sensor_1_1_line_sensor_array_ad54792d41f5676ee4038be95d0482e5d}\index{LineSensorArray@{LineSensorArray}!threshold@{threshold}}
+\index{threshold@{threshold}!LineSensorArray@{LineSensorArray}}
+\doxysubsubsection{\texorpdfstring{threshold()}{threshold()}}
+{\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_array_ad54792d41f5676ee4038be95d0482e5d} 
+threshold (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{linear\+\_\+reading}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}NOTE: UNUSED
+Returns a discretized and normalized version of the input linearized reading
+Scale is 0 -> line sensor MAX_DECAY_TIME
+\end{DoxyVerb}
+ \Hypertarget{class_line_sensor_1_1_line_sensor_array_a63d63e49b7e1d2b568412e48acaf5715}\index{LineSensorArray@{LineSensorArray}!threshold\_linear@{threshold\_linear}}
+\index{threshold\_linear@{threshold\_linear}!LineSensorArray@{LineSensorArray}}
+\doxysubsubsection{\texorpdfstring{threshold\_linear()}{threshold\_linear()}}
+{\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_array_a63d63e49b7e1d2b568412e48acaf5715} 
+threshold\+\_\+linear (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{sensor\+\_\+reading}{, }\item[{}]{sensor}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@param sensor_reading: A LineSensor reading (values from 0-MAX_DECAY_TIME)
+@param sensor: the number of the sensor the reading came from. Used for specific calibration.
+Returns a linearized and thresholded value based on calibration data
+\end{DoxyVerb}
+ \Hypertarget{class_line_sensor_1_1_line_sensor_array_ad0565eecb5e431630081a6ed0f440abc}\index{LineSensorArray@{LineSensorArray}!update\_line\_position@{update\_line\_position}}
+\index{update\_line\_position@{update\_line\_position}!LineSensorArray@{LineSensorArray}}
+\doxysubsubsection{\texorpdfstring{update\_line\_position()}{update\_line\_position()}}
+{\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_array_ad0565eecb5e431630081a6ed0f440abc} 
+update\+\_\+line\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Reads the value from all 8 LineSensor objects. 
+Uses custom calibration data to linearize, threshold, and normalize the values for each LineSensor.
+Creates an array with the modified LineSensor readings.
+Finds the centroid of the values and returns that as a value between -1 and 1.
+Negative values represent the line being to the left of the robot and Positive values represent the line being to the right.
+In the case that no line is detected, outputs 0.
+In the event that most of the sensors detect strongly (a horizontal line is detected), outputs 2
+\end{DoxyVerb}
+ 
 
 \doxysubsection{Field Documentation}
 \Hypertarget{class_line_sensor_1_1_line_sensor_array_a96cad8f33b37886726a9ef851cc8e014}\index{LineSensorArray@{LineSensorArray}!SENSOR\_LIST@{SENSOR\_LIST}}

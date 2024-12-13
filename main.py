@@ -61,7 +61,8 @@ currentHeading = task_share.Share("H",name="current heading",thread_protect=True
 #position shares? maybe a list of all 3 values?
 
 def test_imu(imu):
-    '''Function to test output of IMU, unused in final program'''
+    '''Function to test output of IMU, unused in final sprogram
+    @param imu IMU object to interact with'''
     # Set the IMU to NDOF mode (full sensor fusion mode)
     imu._set_mode(imu.NDOF_MODE)
 
@@ -83,7 +84,8 @@ def test_imu(imu):
         time.sleep(0.1)
 
 def read_imu_cal(imu):
-    '''Read IMU calibration data from the sensor and write to a .txt file'''
+    '''Read IMU calibration data from the sensor and write to a .txt file
+    @param imu IMU object to interact with'''
     data = imu.read_calibration_data()  # reading calibration data from imu into array
 
     with open("IMU_CAL_DATA.txt", "w") as file:
@@ -92,7 +94,8 @@ def read_imu_cal(imu):
             file.write(f"{item}\n")  # Write each item followed by a newline
 
 def write_imu_cal(imu):
-    '''Write IMU calibration data from a .txt file to the sensor'''
+    '''Write IMU calibration data from a .txt file to the sensor
+    @param imu IMU object to interact with'''
     # Read the data from the file
     data = []
     with open("IMU_CAL_DATA.txt", "r") as file:
@@ -105,7 +108,8 @@ def write_imu_cal(imu):
 
 
 def updateButton(pin):
-    '''read onboard button status and update share'''
+    '''read onboard button status and update share
+    @param pin Nucleo button pin, an ISR is tied to this pin to handle it updating'''
     #read button status and store in a share
     buttonStatus.put(True,in_ISR=True)
 

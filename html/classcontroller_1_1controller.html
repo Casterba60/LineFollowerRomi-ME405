@@ -108,14 +108,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7af2dc9defd1d96f21d84aad22add86" id="r_af7af2dc9defd1d96f21d84aad22add86"><td class="memItemLeft" align="right" valign="top"><a id="af7af2dc9defd1d96f21d84aad22add86" name="af7af2dc9defd1d96f21d84aad22add86"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, motor, encoder, ENC_PERIOD)</td></tr>
 <tr class="separator:af7af2dc9defd1d96f21d84aad22add86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08060e0924949738f75a0cdd8b49cef4" id="r_a08060e0924949738f75a0cdd8b49cef4"><td class="memItemLeft" align="right" valign="top"><a id="a08060e0924949738f75a0cdd8b49cef4" name="a08060e0924949738f75a0cdd8b49cef4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> (self)</td></tr>
+<tr class="memitem:a08060e0924949738f75a0cdd8b49cef4" id="r_a08060e0924949738f75a0cdd8b49cef4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08060e0924949738f75a0cdd8b49cef4">run</a> (self)</td></tr>
 <tr class="separator:a08060e0924949738f75a0cdd8b49cef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc48dd3bf9973772036913b7d53aab5c" id="r_acc48dd3bf9973772036913b7d53aab5c"><td class="memItemLeft" align="right" valign="top"><a id="acc48dd3bf9973772036913b7d53aab5c" name="acc48dd3bf9973772036913b7d53aab5c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>setSpeed</b> (self, desiredSpeed)</td></tr>
+<tr class="memitem:acc48dd3bf9973772036913b7d53aab5c" id="r_acc48dd3bf9973772036913b7d53aab5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc48dd3bf9973772036913b7d53aab5c">setSpeed</a> (self, desiredSpeed)</td></tr>
 <tr class="separator:acc48dd3bf9973772036913b7d53aab5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2979b17e2dee3a1b1b9b889a0aaa2c0" id="r_ac2979b17e2dee3a1b1b9b889a0aaa2c0"><td class="memItemLeft" align="right" valign="top"><a id="ac2979b17e2dee3a1b1b9b889a0aaa2c0" name="ac2979b17e2dee3a1b1b9b889a0aaa2c0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>getEncoderPos</b> (self)</td></tr>
+<tr class="memitem:ac2979b17e2dee3a1b1b9b889a0aaa2c0" id="r_ac2979b17e2dee3a1b1b9b889a0aaa2c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2979b17e2dee3a1b1b9b889a0aaa2c0">getEncoderPos</a> (self)</td></tr>
 <tr class="separator:ac2979b17e2dee3a1b1b9b889a0aaa2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -139,6 +136,62 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>refSpeed</b> = 0</td><
 float&#160;</td><td class="memItemRight" valign="bottom"><b>measuredSpeed</b> = self.encoder.get_delta()*4.3633/self.ENC_PERIOD</td></tr>
 <tr class="separator:a16ebad66151e44c2b8f59c28c8b792fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac2979b17e2dee3a1b1b9b889a0aaa2c0" name="ac2979b17e2dee3a1b1b9b889a0aaa2c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2979b17e2dee3a1b1b9b889a0aaa2c0">&#9670;&#160;</a></span>getEncoderPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getEncoderPos </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Return the raw encoder position from the encoder obj</pre> 
+</div>
+</div>
+<a id="a08060e0924949738f75a0cdd8b49cef4" name="a08060e0924949738f75a0cdd8b49cef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08060e0924949738f75a0cdd8b49cef4">&#9670;&#160;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">run </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Run the PI motor controller using input from encoder</pre> 
+</div>
+</div>
+<a id="acc48dd3bf9973772036913b7d53aab5c" name="acc48dd3bf9973772036913b7d53aab5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc48dd3bf9973772036913b7d53aab5c">&#9670;&#160;</a></span>setSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setSpeed </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>desiredSpeed</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Set the desired speed for the controller</pre> 
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="controller_8py.html">controller.py</a></li>
 </ul>

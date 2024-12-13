@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queue_0',['Queue',['../classtask__share_1_1_queue.html',1,'task_share']]]
+  ['obstacledetection_0',['ObstacleDetection',['../classobstacle_detection_1_1_obstacle_detection.html',1,'obstacleDetection']]]
 ];

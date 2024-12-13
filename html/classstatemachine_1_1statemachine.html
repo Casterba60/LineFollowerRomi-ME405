@@ -108,11 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9e0332aa69b004e0f4135fe7b2f7ebec" id="r_a9e0332aa69b004e0f4135fe7b2f7ebec"><td class="memItemLeft" align="right" valign="top"><a id="a9e0332aa69b004e0f4135fe7b2f7ebec" name="a9e0332aa69b004e0f4135fe7b2f7ebec"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, left_controller, right_controller, IMU, buttonStatus, lineArray, obstacleDetection)</td></tr>
 <tr class="separator:a9e0332aa69b004e0f4135fe7b2f7ebec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9add9e75dcad4c1273cc11614fd74dd0" id="r_a9add9e75dcad4c1273cc11614fd74dd0"><td class="memItemLeft" align="right" valign="top"><a id="a9add9e75dcad4c1273cc11614fd74dd0" name="a9add9e75dcad4c1273cc11614fd74dd0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FSM</b> (self)</td></tr>
+<tr class="memitem:a9add9e75dcad4c1273cc11614fd74dd0" id="r_a9add9e75dcad4c1273cc11614fd74dd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9add9e75dcad4c1273cc11614fd74dd0">FSM</a> (self)</td></tr>
 <tr class="separator:a9add9e75dcad4c1273cc11614fd74dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e57d80bdddbc273cac90383bb9c18c5" id="r_a5e57d80bdddbc273cac90383bb9c18c5"><td class="memItemLeft" align="right" valign="top"><a id="a5e57d80bdddbc273cac90383bb9c18c5" name="a5e57d80bdddbc273cac90383bb9c18c5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>headingControl</b> (self, desiredHeading, velocity, gain=1/15)</td></tr>
+<tr class="memitem:a5e57d80bdddbc273cac90383bb9c18c5" id="r_a5e57d80bdddbc273cac90383bb9c18c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e57d80bdddbc273cac90383bb9c18c5">headingControl</a> (self, desiredHeading, velocity, gain=1/15)</td></tr>
 <tr class="separator:a5e57d80bdddbc273cac90383bb9c18c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -187,6 +185,61 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>previousPosition</b> =
 int&#160;</td><td class="memItemRight" valign="bottom"><b>straightHeading</b> = 4</td></tr>
 <tr class="separator:a6250ce99b0fdaa0dd39e8b4282663b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9add9e75dcad4c1273cc11614fd74dd0" name="a9add9e75dcad4c1273cc11614fd74dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9add9e75dcad4c1273cc11614fd74dd0">&#9670;&#160;</a></span>FSM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FSM </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment"> Finite State Machine Generator Task:
+    State 1: Initialization 
+    State 2: Idle - Wait for button push
+    State 3: Line Following
+    State 4: Obstacle Avoidance
+    State 5: Return to Base</pre> 
+</div>
+</div>
+<a id="a5e57d80bdddbc273cac90383bb9c18c5" name="a5e57d80bdddbc273cac90383bb9c18c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e57d80bdddbc273cac90383bb9c18c5">&#9670;&#160;</a></span>headingControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">headingControl </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>desiredHeading</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>velocity</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>gain</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1/15</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Drive motor speeds to maintain heading and correct for error (Proportional Control)
+</pre> 
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="statemachine_8py.html">statemachine.py</a></li>
 </ul>

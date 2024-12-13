@@ -5,11 +5,9 @@
 \item 
 \mbox{\hyperlink{class_line_sensor_1_1_line_sensor_a2eef6dc14f5b3e2beb43b9af326d14eb}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Value\+\_\+pin, LED\+\_\+pin)
 \begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_line_sensor_1_1_line_sensor}{Line\+Sensor} Object. \end{DoxyCompactList}\item 
-\Hypertarget{class_line_sensor_1_1_line_sensor_a4a20ecec2cad37001a8b3551f63f0045}\label{class_line_sensor_1_1_line_sensor_a4a20ecec2cad37001a8b3551f63f0045} 
-{\bfseries update\+\_\+value} (self)
+\mbox{\hyperlink{class_line_sensor_1_1_line_sensor_a4a20ecec2cad37001a8b3551f63f0045}{update\+\_\+value}} (self)
 \item 
-\Hypertarget{class_line_sensor_1_1_line_sensor_aabe132f7ac38639bfd0dac75a9c38c9c}\label{class_line_sensor_1_1_line_sensor_aabe132f7ac38639bfd0dac75a9c38c9c} 
-{\bfseries get\+\_\+value} (self)
+\mbox{\hyperlink{class_line_sensor_1_1_line_sensor_aabe132f7ac38639bfd0dac75a9c38c9c}{get\+\_\+value}} (self)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
@@ -50,6 +48,30 @@ Initializes the \doxylink{class_line_sensor_1_1_line_sensor}{Line\+Sensor} Objec
 \hline
 \end{DoxyParams}
 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_line_sensor_1_1_line_sensor_aabe132f7ac38639bfd0dac75a9c38c9c}\index{LineSensor@{LineSensor}!get\_value@{get\_value}}
+\index{get\_value@{get\_value}!LineSensor@{LineSensor}}
+\doxysubsubsection{\texorpdfstring{get\_value()}{get\_value()}}
+{\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_aabe132f7ac38639bfd0dac75a9c38c9c} 
+get\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Updates the value of the sensor and then returns it
+\end{DoxyVerb}
+ \Hypertarget{class_line_sensor_1_1_line_sensor_a4a20ecec2cad37001a8b3551f63f0045}\index{LineSensor@{LineSensor}!update\_value@{update\_value}}
+\index{update\_value@{update\_value}!LineSensor@{LineSensor}}
+\doxysubsubsection{\texorpdfstring{update\_value()}{update\_value()}}
+{\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_a4a20ecec2cad37001a8b3551f63f0045} 
+update\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}reads the analog value of the line sensor
+Step 1: Turn the LED On
+Step 2: Set the Value_Pin to an output and drive it high for at least 10 microseconds
+Step 3: Set the Value_Pin to an input and measure the time it takes to decay in microseconds. Decay time is capped by the internal parameter MAX_DECAY_TIME
+Step 4: Turn LED off
+Step 5: Sets the internal VALUE parameter to the measured decay time
+\end{DoxyVerb}
+ 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

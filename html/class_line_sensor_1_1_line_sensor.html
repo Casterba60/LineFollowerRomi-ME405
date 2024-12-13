@@ -108,11 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2eef6dc14f5b3e2beb43b9af326d14eb" id="r_a2eef6dc14f5b3e2beb43b9af326d14eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eef6dc14f5b3e2beb43b9af326d14eb">__init__</a> (self, Value_pin, LED_pin)</td></tr>
 <tr class="memdesc:a2eef6dc14f5b3e2beb43b9af326d14eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_line_sensor_1_1_line_sensor.html">LineSensor</a> Object.  <br /></td></tr>
 <tr class="separator:a2eef6dc14f5b3e2beb43b9af326d14eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a20ecec2cad37001a8b3551f63f0045" id="r_a4a20ecec2cad37001a8b3551f63f0045"><td class="memItemLeft" align="right" valign="top"><a id="a4a20ecec2cad37001a8b3551f63f0045" name="a4a20ecec2cad37001a8b3551f63f0045"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>update_value</b> (self)</td></tr>
+<tr class="memitem:a4a20ecec2cad37001a8b3551f63f0045" id="r_a4a20ecec2cad37001a8b3551f63f0045"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a20ecec2cad37001a8b3551f63f0045">update_value</a> (self)</td></tr>
 <tr class="separator:a4a20ecec2cad37001a8b3551f63f0045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabe132f7ac38639bfd0dac75a9c38c9c" id="r_aabe132f7ac38639bfd0dac75a9c38c9c"><td class="memItemLeft" align="right" valign="top"><a id="aabe132f7ac38639bfd0dac75a9c38c9c" name="aabe132f7ac38639bfd0dac75a9c38c9c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>get_value</b> (self)</td></tr>
+<tr class="memitem:aabe132f7ac38639bfd0dac75a9c38c9c" id="r_aabe132f7ac38639bfd0dac75a9c38c9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabe132f7ac38639bfd0dac75a9c38c9c">get_value</a> (self)</td></tr>
 <tr class="separator:aabe132f7ac38639bfd0dac75a9c38c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -167,6 +165,48 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_DECAY_TIME</b> = 2
   </dd>
 </dl>
 
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aabe132f7ac38639bfd0dac75a9c38c9c" name="aabe132f7ac38639bfd0dac75a9c38c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabe132f7ac38639bfd0dac75a9c38c9c">&#9670;&#160;</a></span>get_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">get_value </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Updates the value of the sensor and then returns it
+</pre> 
+</div>
+</div>
+<a id="a4a20ecec2cad37001a8b3551f63f0045" name="a4a20ecec2cad37001a8b3551f63f0045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a20ecec2cad37001a8b3551f63f0045">&#9670;&#160;</a></span>update_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">update_value </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">reads the analog value of the line sensor
+Step 1: Turn the LED On
+Step 2: Set the Value_Pin to an output and drive it high for at least 10 microseconds
+Step 3: Set the Value_Pin to an input and measure the time it takes to decay in microseconds. Decay time is capped by the internal parameter MAX_DECAY_TIME
+Step 4: Turn LED off
+Step 5: Sets the internal VALUE parameter to the measured decay time
+</pre> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -299,6 +299,9 @@ class statemachine:
 
     def headingControl(self,desiredHeading,velocity,gain=1/15):
         """Drive motor speeds to maintain heading and correct for error (Proportional Control)
+        @param desiredHeading the heading to maintain/drive to
+        @param velocity linear velocity to maintain while correcting heading
+        @param gain the gain from heading error to rotation speed
         """
         error = desiredHeading - self.imu.get_heading()
         if(error > 180): error -= 360

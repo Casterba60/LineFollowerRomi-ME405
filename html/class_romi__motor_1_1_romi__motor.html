@@ -108,14 +108,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f181c811a75a19a4c7f28e3781fdf3e" id="r_a8f181c811a75a19a4c7f28e3781fdf3e"><td class="memItemLeft" align="right" valign="top"><a id="a8f181c811a75a19a4c7f28e3781fdf3e" name="a8f181c811a75a19a4c7f28e3781fdf3e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, EN_Pin, Direction_Pin, Effort_Pin, PWM_tim, tim_channel)</td></tr>
 <tr class="separator:a8f181c811a75a19a4c7f28e3781fdf3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4843e47b8b7c0a2b24655b3f936724da" id="r_a4843e47b8b7c0a2b24655b3f936724da"><td class="memItemLeft" align="right" valign="top"><a id="a4843e47b8b7c0a2b24655b3f936724da" name="a4843e47b8b7c0a2b24655b3f936724da"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>set_duty</b> (self, duty)</td></tr>
+<tr class="memitem:a4843e47b8b7c0a2b24655b3f936724da" id="r_a4843e47b8b7c0a2b24655b3f936724da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4843e47b8b7c0a2b24655b3f936724da">set_duty</a> (self, duty)</td></tr>
 <tr class="separator:a4843e47b8b7c0a2b24655b3f936724da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e6e54d00614f1b853da55dcf2997b27" id="r_a9e6e54d00614f1b853da55dcf2997b27"><td class="memItemLeft" align="right" valign="top"><a id="a9e6e54d00614f1b853da55dcf2997b27" name="a9e6e54d00614f1b853da55dcf2997b27"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>enable</b> (self)</td></tr>
+<tr class="memitem:a9e6e54d00614f1b853da55dcf2997b27" id="r_a9e6e54d00614f1b853da55dcf2997b27"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e6e54d00614f1b853da55dcf2997b27">enable</a> (self)</td></tr>
 <tr class="separator:a9e6e54d00614f1b853da55dcf2997b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1718b1e9b3de1dcda87f9b58d0c6321" id="r_ad1718b1e9b3de1dcda87f9b58d0c6321"><td class="memItemLeft" align="right" valign="top"><a id="ad1718b1e9b3de1dcda87f9b58d0c6321" name="ad1718b1e9b3de1dcda87f9b58d0c6321"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>disable</b> (self)</td></tr>
+<tr class="memitem:ad1718b1e9b3de1dcda87f9b58d0c6321" id="r_ad1718b1e9b3de1dcda87f9b58d0c6321"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1718b1e9b3de1dcda87f9b58d0c6321">disable</a> (self)</td></tr>
 <tr class="separator:ad1718b1e9b3de1dcda87f9b58d0c6321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -133,6 +130,62 @@ Data Fields</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>PWM</b> = PWM_tim.channel(tim_channel, mode = Timer.PWM, pin = self.EFFORT)</td></tr>
 <tr class="separator:ab61a71713324083d2cdf8dc8a361acfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad1718b1e9b3de1dcda87f9b58d0c6321" name="ad1718b1e9b3de1dcda87f9b58d0c6321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1718b1e9b3de1dcda87f9b58d0c6321">&#9670;&#160;</a></span>disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">disable </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Disables the motor (EN pin low)</pre> 
+</div>
+</div>
+<a id="a9e6e54d00614f1b853da55dcf2997b27" name="a9e6e54d00614f1b853da55dcf2997b27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6e54d00614f1b853da55dcf2997b27">&#9670;&#160;</a></span>enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enable </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Enables the motor (EN pin high)</pre> 
+</div>
+</div>
+<a id="a4843e47b8b7c0a2b24655b3f936724da" name="a4843e47b8b7c0a2b24655b3f936724da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4843e47b8b7c0a2b24655b3f936724da">&#9670;&#160;</a></span>set_duty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set_duty </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>duty</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Sets the duty cycle of the motor</pre> 
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_romi__motor_8py.html">Romi_motor.py</a></li>
 </ul>
