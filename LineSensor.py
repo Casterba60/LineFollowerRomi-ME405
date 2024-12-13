@@ -151,9 +151,9 @@ class LineSensorArray:
 
     def threshold_linear(self, sensor_reading, sensor):
         """
+        Returns a linearized and thresholded value based on calibration data
         @param sensor_reading: A LineSensor reading (values from 0-MAX_DECAY_TIME)
         @param sensor: the number of the sensor the reading came from. Used for specific calibration.
-        Returns a linearized and thresholded value based on calibration data
         """
         if(sensor==0):
             if(sensor_reading<600):
@@ -285,9 +285,9 @@ class LineSensorArray:
 
     def centroid(self, readings):
         """
-        @param readings: an array of modified sensor readings
         Calculates the centroid of the readings by finding a weighted sum and dividing it by a regular sum of the readings
         Returns a value between -1 and 1
+        @param readings: an array of modified sensor readings
         """
         # returns the centroid of the readings 
         weighted_sum = 0
