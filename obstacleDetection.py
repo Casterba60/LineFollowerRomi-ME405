@@ -37,6 +37,7 @@ class ObstacleDetection:
         for idx, pin in enumerate(bumpSensorPins):
             self.bumpPins.append(pyb.Pin(pin,mode=pyb.Pin.IN,pull=pyb.Pin.PULL_UP))
     def get_state(self):
+        '''Returns whether an obstacle has been detected/collided with'''
         for pin in self.bumpPins:
             if(pin.value() == False):
                 return True

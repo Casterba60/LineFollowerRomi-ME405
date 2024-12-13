@@ -44,6 +44,7 @@ class Romi_motor:
         pass
 
     def set_duty (self, duty):
+        '''Sets the duty cycle of the motor'''
         if (-100 <= duty < 0):
             self.PWM.pulse_width_percent(-duty)
             self.DIRECTION.low()
@@ -54,10 +55,12 @@ class Romi_motor:
             raise ValueError
         pass
     def enable (self):
+        '''Enables the motor (EN pin high)'''
         self.ENABLE.high()
         #print("enabled")
         pass
     def disable (self):
+        '''Disables the motor (EN pin low)'''
         self.ENABLE.low()
         #print("disabled")
         pass
