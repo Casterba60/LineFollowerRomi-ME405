@@ -1,0 +1,93 @@
+\doxysection{task\+\_\+share.\+py File Reference}
+\hypertarget{task__share_8py}{}\label{task__share_8py}\index{task\_share.py@{task\_share.py}}
+
+
+This file contains classes which allow tasks to share data without the risk of data corruption by interrupts.  
+
+
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtask__share_1_1_base_share}{Base\+Share}}
+\begin{DoxyCompactList}\small\item\em Base class for queues and shares which exchange data between tasks. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtask__share_1_1_queue}{Queue}}
+\begin{DoxyCompactList}\small\item\em A queue which is used to transfer data from one task to another. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtask__share_1_1_share}{Share}}
+\begin{DoxyCompactList}\small\item\em An item which holds data to be shared between tasks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{task__share_8py_aff1e2e877412ee5dcf2c327ff81af25b}{show\+\_\+all}} ()
+\begin{DoxyCompactList}\small\item\em Create a string holding a diagnostic printout showing the status of each queue and share in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{task__share_8py_a94580c8e5af8391844de9b7716f7e722}{share\+\_\+list}} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is a system-\/wide list of all the queues and shared variables. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{task__share_8py_af120ddf4c633ac9ebe9b771d53d41217}{type\+\_\+code\+\_\+strings}}
+\begin{DoxyCompactList}\small\item\em This dictionary allows readable printouts of queue and share data types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains classes which allow tasks to share data without the risk of data corruption by interrupts. 
+
+\begin{DoxyAuthor}{Author}
+JR Ridgely 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017-\/Jan-\/01 JRR Approximate date of creation of file 
+
+2021-\/Dec-\/18 JRR Docstrings changed to work without Doxy\+Py\+Py 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+This program is copyright (c) 2017-\/2023 by JR Ridgely and released under the GNU Public License, version 3.\+0.
+\end{DoxyCopyright}
+It is intended for educational use only, but its use is not limited thereto. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}\+AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{task__share_8py_aff1e2e877412ee5dcf2c327ff81af25b}\index{task\_share.py@{task\_share.py}!show\_all@{show\_all}}
+\index{show\_all@{show\_all}!task\_share.py@{task\_share.py}}
+\doxysubsubsection{\texorpdfstring{show\_all()}{show\_all()}}
+{\footnotesize\ttfamily \label{task__share_8py_aff1e2e877412ee5dcf2c327ff81af25b} 
+show\+\_\+all (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Create a string holding a diagnostic printout showing the status of each queue and share in the system. 
+
+\begin{DoxyReturn}{Returns}
+A string containing information about each queue and share 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{task__share_8py_a94580c8e5af8391844de9b7716f7e722}\index{task\_share.py@{task\_share.py}!share\_list@{share\_list}}
+\index{share\_list@{share\_list}!task\_share.py@{task\_share.py}}
+\doxysubsubsection{\texorpdfstring{share\_list}{share\_list}}
+{\footnotesize\ttfamily \label{task__share_8py_a94580c8e5af8391844de9b7716f7e722} 
+list share\+\_\+list = \mbox{[}$\,$\mbox{]}}
+
+
+
+This is a system-\/wide list of all the queues and shared variables. 
+
+It is used to create diagnostic printouts. \Hypertarget{task__share_8py_af120ddf4c633ac9ebe9b771d53d41217}\index{task\_share.py@{task\_share.py}!type\_code\_strings@{type\_code\_strings}}
+\index{type\_code\_strings@{type\_code\_strings}!task\_share.py@{task\_share.py}}
+\doxysubsubsection{\texorpdfstring{type\_code\_strings}{type\_code\_strings}}
+{\footnotesize\ttfamily \label{task__share_8py_af120ddf4c633ac9ebe9b771d53d41217} 
+dict type\+\_\+code\+\_\+strings}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{\textcolor{stringliteral}{'b'}\ :\ \textcolor{stringliteral}{"{}int8"{}},\ \ \ \textcolor{stringliteral}{'B'}\ :\ \textcolor{stringliteral}{"{}uint8"{}},}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'h'}\ :\ \textcolor{stringliteral}{"{}int16"{}},\ \ \textcolor{stringliteral}{'H'}\ :\ \textcolor{stringliteral}{"{}uint16"{}},}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'i'}\ :\ \textcolor{stringliteral}{"{}int(?)"{}},\ \textcolor{stringliteral}{'I'}\ :\ \textcolor{stringliteral}{"{}uint(?)"{}},}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'l'}\ :\ \textcolor{stringliteral}{"{}int32"{}},\ \ \textcolor{stringliteral}{'L'}\ :\ \textcolor{stringliteral}{"{}uint32"{}},}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'q'}\ :\ \textcolor{stringliteral}{"{}int64"{}},\ \ \textcolor{stringliteral}{'Q'}\ :\ \textcolor{stringliteral}{"{}uint64"{}},}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'f'}\ :\ \textcolor{stringliteral}{"{}float"{}},\ \ \textcolor{stringliteral}{'d'}\ :\ \textcolor{stringliteral}{"{}double"{}}\}}
+
+\end{DoxyCode}
+
+
+This dictionary allows readable printouts of queue and share data types. 
+

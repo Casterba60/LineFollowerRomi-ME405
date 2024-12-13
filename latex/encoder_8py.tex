@@ -1,0 +1,50 @@
+\doxysection{encoder.\+py File Reference}
+\hypertarget{encoder_8py}{}\label{encoder_8py}\index{encoder.py@{encoder.py}}
+
+
+This file is the Romi Robot encoder class, initializing required pins and creating methods required to properly utilize the encoders.  
+
+
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classencoder_1_1_encoder}{Encoder}}
+\begin{DoxyCompactList}\small\item\em Interface with quadrature encoders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file is the Romi Robot encoder class, initializing required pins and creating methods required to properly utilize the encoders. 
+
+This file is the Romi Robot obstacle detection class, initializing required pins and creating methods required to properly utilize the 6 bump sensors/limit switches.
+
+Channel A and Channel B are connected to GPIO pins in order to allow the microchip to read the output signals of the encoders and increment a timer register. Power and ground are linked to their respective buses. The {\ttfamily update} function runs as a generator function in the scheduler, allowing it to update every 20ms (can be changed). The {\ttfamily get\+\_\+delta} function returns the last increment made to the encoder. The {\ttfamily get\+\_\+position} function returns the current position of the encoder. The {\ttfamily zero} function zeroes the position of the encoder.
+
+\begin{DoxyAuthor}{Author}
+Cole Sterba, Devon Bolt 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/Nov-\/12 Approximate date of creation of file 
+
+2024-\/Dec-\/12 Final tuning completed 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+This program is copyright (c) 2024 by C Sterba and D Bolt and released under the GNU Public License, version 3.\+0.
+\end{DoxyCopyright}
+It is intended for educational use only, but its use is not limited thereto. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}\+AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The obstacle detection class takes readings across the 6 bump sensors mounted to the front. The {\ttfamily get\+\_\+state} task reads the state of all of these sensors and returns true if one of them is tripped, indicating a collision.
+
+The obstacle detection class was designed to have the ability to be expanded upon, with the option of using IR or ultrasound sensors to detect an obstacle prior to collision. These changes have yet to be implemented
+
+\begin{DoxyAuthor}{Author}
+Cole Sterba, Devon Bolt 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/Nov-\/12 Approximate date of creation of file 
+
+2024-\/Dec-\/12 Final tuning completed 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+This program is copyright (c) 2024 by C Sterba and D Bolt and released under the GNU Public License, version 3.\+0.
+\end{DoxyCopyright}
+It is intended for educational use only, but its use is not limited thereto. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}\+AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

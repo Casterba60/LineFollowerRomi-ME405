@@ -1,0 +1,91 @@
+\doxysection{statemachine Class Reference}
+\hypertarget{classstatemachine_1_1statemachine}{}\label{classstatemachine_1_1statemachine}\index{statemachine@{statemachine}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a9e0332aa69b004e0f4135fe7b2f7ebec}\label{classstatemachine_1_1statemachine_a9e0332aa69b004e0f4135fe7b2f7ebec} 
+{\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, left\+\_\+controller, right\+\_\+controller, IMU, button\+Status, line\+Array, obstacle\+Detection)
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a9add9e75dcad4c1273cc11614fd74dd0}\label{classstatemachine_1_1statemachine_a9add9e75dcad4c1273cc11614fd74dd0} 
+{\bfseries FSM} (self)
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a5e57d80bdddbc273cac90383bb9c18c5}\label{classstatemachine_1_1statemachine_a5e57d80bdddbc273cac90383bb9c18c5} 
+{\bfseries heading\+Control} (self, desired\+Heading, velocity, gain=1/15)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a0514aabed091ee5e2f35766eb01eced6}\label{classstatemachine_1_1statemachine_a0514aabed091ee5e2f35766eb01eced6} 
+bool {\bfseries debug} = False
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a56e8aa65d53b715d6ef08c6820592297}\label{classstatemachine_1_1statemachine_a56e8aa65d53b715d6ef08c6820592297} 
+{\bfseries left\+\_\+controller} = left\+\_\+controller
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a4aac2f23346e97c496142c3043e5a1f6}\label{classstatemachine_1_1statemachine_a4aac2f23346e97c496142c3043e5a1f6} 
+{\bfseries right\+\_\+controller} = right\+\_\+controller
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a1c63e66c94a8d22300990887e84ad6fc}\label{classstatemachine_1_1statemachine_a1c63e66c94a8d22300990887e84ad6fc} 
+{\bfseries imu} = IMU
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_affdf262d58c1adbd22c90f3d23c0fb9f}\label{classstatemachine_1_1statemachine_affdf262d58c1adbd22c90f3d23c0fb9f} 
+{\bfseries button\+Status} = button\+Status
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a1d66e374f433f6765ef8a3ba7ca83d8d}\label{classstatemachine_1_1statemachine_a1d66e374f433f6765ef8a3ba7ca83d8d} 
+{\bfseries line\+Array} = line\+Array
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_ad8d69f6429b2d3cf51785c4eef36956b}\label{classstatemachine_1_1statemachine_ad8d69f6429b2d3cf51785c4eef36956b} 
+{\bfseries obstacle\+Detection} = obstacle\+Detection
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_ad209a6b4e081cf7b984dcfe8ceb7c50d}\label{classstatemachine_1_1statemachine_ad209a6b4e081cf7b984dcfe8ceb7c50d} 
+int {\bfseries gain} = -\/15
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a15e761c9bc9dccde785884a2fff6f281}\label{classstatemachine_1_1statemachine_a15e761c9bc9dccde785884a2fff6f281} 
+int {\bfseries global\+\_\+x} = 0
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a147a47cc7b03c66c4b27d69747f2dc6b}\label{classstatemachine_1_1statemachine_a147a47cc7b03c66c4b27d69747f2dc6b} 
+int {\bfseries global\+\_\+y} = 0
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a6309f9735ba02941ca9f45abd3690b66}\label{classstatemachine_1_1statemachine_a6309f9735ba02941ca9f45abd3690b66} 
+{\bfseries starting\+\_\+\+Heading} = self.\+imu.\+get\+\_\+heading()
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a49f28692abdb415613e4cebb06b5bb90}\label{classstatemachine_1_1statemachine_a49f28692abdb415613e4cebb06b5bb90} 
+{\bfseries previous\+Heading} = self.\+starting\+\_\+\+Heading
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_ab97957a360d9f69ed9c8fb9ef343f37c}\label{classstatemachine_1_1statemachine_ab97957a360d9f69ed9c8fb9ef343f37c} 
+int {\bfseries total\+Heading\+Change} = 0
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_adfcc0266093d3aa14fba1df0f3be3b0f}\label{classstatemachine_1_1statemachine_adfcc0266093d3aa14fba1df0f3be3b0f} 
+{\bfseries current\+Heading} = self.\+imu.\+get\+\_\+heading()
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a6c655b54c6ae9491245857ba7a9eacd2}\label{classstatemachine_1_1statemachine_a6c655b54c6ae9491245857ba7a9eacd2} 
+{\bfseries delta\+Heading} = self.\+current\+Heading-\/self.\+previous\+Heading
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a49f28692abdb415613e4cebb06b5bb90}\label{classstatemachine_1_1statemachine_a49f28692abdb415613e4cebb06b5bb90} 
+int {\bfseries previous\+Heading} = 360
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_ae502eb8c3e6a0284c022309758faf7c2}\label{classstatemachine_1_1statemachine_ae502eb8c3e6a0284c022309758faf7c2} 
+{\bfseries previous\+Position} = self.\+left\+\_\+controller.\+get\+Encoder\+Pos()
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a76f805d1623b72ec26663c5bb9a1ab4c}\label{classstatemachine_1_1statemachine_a76f805d1623b72ec26663c5bb9a1ab4c} 
+int {\bfseries total\+Pos\+Change} = 0
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a6250ce99b0fdaa0dd39e8b4282663b4e}\label{classstatemachine_1_1statemachine_a6250ce99b0fdaa0dd39e8b4282663b4e} 
+{\bfseries straight\+Heading} = self.\+imu.\+get\+\_\+heading()
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a257670e2f81620ddcdc320a7d96ea806}\label{classstatemachine_1_1statemachine_a257670e2f81620ddcdc320a7d96ea806} 
+{\bfseries current\+Position} = self.\+left\+\_\+controller.\+get\+Encoder\+Pos()
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a190a2f968a0e95977f375594cad12a75}\label{classstatemachine_1_1statemachine_a190a2f968a0e95977f375594cad12a75} 
+{\bfseries delta\+Position} = self.\+current\+Position-\/self.\+previous\+Position
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_ae502eb8c3e6a0284c022309758faf7c2}\label{classstatemachine_1_1statemachine_ae502eb8c3e6a0284c022309758faf7c2} 
+int {\bfseries previous\+Position} = 65536
+\item 
+\Hypertarget{classstatemachine_1_1statemachine_a6250ce99b0fdaa0dd39e8b4282663b4e}\label{classstatemachine_1_1statemachine_a6250ce99b0fdaa0dd39e8b4282663b4e} 
+int {\bfseries straight\+Heading} = 4
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{statemachine_8py}{statemachine.\+py}}\end{DoxyCompactItemize}

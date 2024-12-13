@@ -1,0 +1,154 @@
+\doxysection{BNO055 Class Reference}
+\hypertarget{class_b_n_o055_1_1_b_n_o055}{}\label{class_b_n_o055_1_1_b_n_o055}\index{BNO055@{BNO055}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_a61e54a71b7a9962b8f4ed272a7d6182d}\label{class_b_n_o055_1_1_b_n_o055_a61e54a71b7a9962b8f4ed272a7d6182d} 
+{\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, i2c\+\_\+bus)
+\item 
+\mbox{\hyperlink{class_b_n_o055_1_1_b_n_o055_aba227d4dc3ef4be7fbbd1a4a42e8b3cb}{get\+\_\+calibration\+\_\+status}} (self)
+\item 
+\mbox{\hyperlink{class_b_n_o055_1_1_b_n_o055_a65c36a8ac62c4f0fea0001b4f5f36b7e}{get\+\_\+calibration\+\_\+status\+\_\+values}} (self)
+\item 
+\mbox{\hyperlink{class_b_n_o055_1_1_b_n_o055_a03fa8ba205552edf04a92bd35fa85061}{write\+\_\+calibration\+\_\+data}} (self, data)
+\item 
+\mbox{\hyperlink{class_b_n_o055_1_1_b_n_o055_ae2cfe6d53b821c739755ecd0dfce6eec}{read\+\_\+calibration\+\_\+data}} (self)
+\item 
+\mbox{\hyperlink{class_b_n_o055_1_1_b_n_o055_a862ee411e3e07e4baf89103431361a99}{get\+\_\+euler\+\_\+angles}} (self)
+\item 
+\mbox{\hyperlink{class_b_n_o055_1_1_b_n_o055_ab15280644fb5f947335b805300d86d7e}{get\+\_\+heading}} (self)
+\item 
+\mbox{\hyperlink{class_b_n_o055_1_1_b_n_o055_acd46bcb63c260b8f73328ed2881f637d}{get\+\_\+angular\+\_\+velocity}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_abd67b7f7b895bcca6ddd4e477f343052}\label{class_b_n_o055_1_1_b_n_o055_abd67b7f7b895bcca6ddd4e477f343052} 
+{\bfseries i2c} = I2C(i2c\+\_\+bus, I2\+C.\+MASTER)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_af6962a55be3d30d83c1777bde2ea1e5f}\label{class_b_n_o055_1_1_b_n_o055_af6962a55be3d30d83c1777bde2ea1e5f} 
+int {\bfseries BNO055\+\_\+\+I2\+C\+\_\+\+ADDR} = 0x28
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_a7665757253c15802864fc301da7039d3}\label{class_b_n_o055_1_1_b_n_o055_a7665757253c15802864fc301da7039d3} 
+int {\bfseries BNO055\+\_\+\+OPR\+\_\+\+MODE\+\_\+\+ADDR} = 0x3D
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_a2f8f828fa7066a1f984dc3e19060f9ff}\label{class_b_n_o055_1_1_b_n_o055_a2f8f828fa7066a1f984dc3e19060f9ff} 
+int {\bfseries BNO055\+\_\+\+CALIB\+\_\+\+STAT\+\_\+\+ADDR} = 0x35
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_afe4a706806078acec8a8e120394e0057}\label{class_b_n_o055_1_1_b_n_o055_afe4a706806078acec8a8e120394e0057} 
+int {\bfseries BNO055\+\_\+\+EULER\+\_\+\+H\+\_\+\+LSB\+\_\+\+ADDR} = 0x1A
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_a63917038edaae219787916736d52e71e}\label{class_b_n_o055_1_1_b_n_o055_a63917038edaae219787916736d52e71e} 
+int {\bfseries BNO055\+\_\+\+GYRO\+\_\+\+DATA\+\_\+\+X\+\_\+\+LSB\+\_\+\+ADDR} = 0x14
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_ac6f055769329c61c554b9f8c18503a2b}\label{class_b_n_o055_1_1_b_n_o055_ac6f055769329c61c554b9f8c18503a2b} 
+int {\bfseries BNO055\+\_\+\+CALIB\+\_\+\+DATA\+\_\+\+ADDR} = 0x55
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_a96bb1ce5300d5c63dcf527f0aa87301b}\label{class_b_n_o055_1_1_b_n_o055_a96bb1ce5300d5c63dcf527f0aa87301b} 
+int {\bfseries CONFIG\+\_\+\+MODE} = 0x00
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_a4e9e820e5b8d3fa9991449232d271c37}\label{class_b_n_o055_1_1_b_n_o055_a4e9e820e5b8d3fa9991449232d271c37} 
+int {\bfseries IMU\+\_\+\+MODE} = 0x08
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_a6c4a93c876cbb199827e5a5ae37cbb08}\label{class_b_n_o055_1_1_b_n_o055_a6c4a93c876cbb199827e5a5ae37cbb08} 
+int {\bfseries COMPASS\+\_\+\+MODE} = 0x09
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_a5490ca2fdf87c34cf213fe47112140b9}\label{class_b_n_o055_1_1_b_n_o055_a5490ca2fdf87c34cf213fe47112140b9} 
+int {\bfseries M4\+G\+\_\+\+MODE} = 0x0A
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_ac98e8f5b874698b8f086dd39820fc001}\label{class_b_n_o055_1_1_b_n_o055_ac98e8f5b874698b8f086dd39820fc001} 
+int {\bfseries NDOF\+\_\+\+FMC\+\_\+\+OFF\+\_\+\+MODE} = 0x0B
+\item 
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_a5ca5d625c74e3da033c40aa84b6c0ef2}\label{class_b_n_o055_1_1_b_n_o055_a5ca5d625c74e3da033c40aa84b6c0ef2} 
+int {\bfseries NDOF\+\_\+\+MODE} = 0x0C
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_n_o055_1_1_b_n_o055_a80827d67b5f37e25648cf046322e1451}{\+\_\+write\+\_\+byte}} (self, register, value)
+\item 
+\mbox{\hyperlink{class_b_n_o055_1_1_b_n_o055_af594284eae550a6e4ab9ff7004259071}{\+\_\+read\+\_\+byte}} (self, register)
+\item 
+\mbox{\hyperlink{class_b_n_o055_1_1_b_n_o055_a20e8e73601ce6bcded2f8ba795ce5d57}{\+\_\+set\+\_\+mode}} (self, mode)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_n_o055_1_1_b_n_o055_af594284eae550a6e4ab9ff7004259071}\index{BNO055@{BNO055}!\_read\_byte@{\_read\_byte}}
+\index{\_read\_byte@{\_read\_byte}!BNO055@{BNO055}}
+\doxysubsubsection{\texorpdfstring{\_read\_byte()}{\_read\_byte()}}
+{\footnotesize\ttfamily \label{class_b_n_o055_1_1_b_n_o055_af594284eae550a6e4ab9ff7004259071} 
+\+\_\+read\+\_\+byte (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{register}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Read a byte from the specified register.\end{DoxyVerb}
+ \Hypertarget{class_b_n_o055_1_1_b_n_o055_a20e8e73601ce6bcded2f8ba795ce5d57}\index{BNO055@{BNO055}!\_set\_mode@{\_set\_mode}}
+\index{\_set\_mode@{\_set\_mode}!BNO055@{BNO055}}
+\doxysubsubsection{\texorpdfstring{\_set\_mode()}{\_set\_mode()}}
+{\footnotesize\ttfamily \label{class_b_n_o055_1_1_b_n_o055_a20e8e73601ce6bcded2f8ba795ce5d57} 
+\+\_\+set\+\_\+mode (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Set the operation mode of the BNO055.\end{DoxyVerb}
+ \Hypertarget{class_b_n_o055_1_1_b_n_o055_a80827d67b5f37e25648cf046322e1451}\index{BNO055@{BNO055}!\_write\_byte@{\_write\_byte}}
+\index{\_write\_byte@{\_write\_byte}!BNO055@{BNO055}}
+\doxysubsubsection{\texorpdfstring{\_write\_byte()}{\_write\_byte()}}
+{\footnotesize\ttfamily \label{class_b_n_o055_1_1_b_n_o055_a80827d67b5f37e25648cf046322e1451} 
+\+\_\+write\+\_\+byte (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{register}{, }\item[{}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Write a byte to the specified register.\end{DoxyVerb}
+ \Hypertarget{class_b_n_o055_1_1_b_n_o055_acd46bcb63c260b8f73328ed2881f637d}\index{BNO055@{BNO055}!get\_angular\_velocity@{get\_angular\_velocity}}
+\index{get\_angular\_velocity@{get\_angular\_velocity}!BNO055@{BNO055}}
+\doxysubsubsection{\texorpdfstring{get\_angular\_velocity()}{get\_angular\_velocity()}}
+{\footnotesize\ttfamily \label{class_b_n_o055_1_1_b_n_o055_acd46bcb63c260b8f73328ed2881f637d} 
+get\+\_\+angular\+\_\+velocity (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get angular velocity (x, y, z) in degrees per second.\end{DoxyVerb}
+ \Hypertarget{class_b_n_o055_1_1_b_n_o055_aba227d4dc3ef4be7fbbd1a4a42e8b3cb}\index{BNO055@{BNO055}!get\_calibration\_status@{get\_calibration\_status}}
+\index{get\_calibration\_status@{get\_calibration\_status}!BNO055@{BNO055}}
+\doxysubsubsection{\texorpdfstring{get\_calibration\_status()}{get\_calibration\_status()}}
+{\footnotesize\ttfamily \label{class_b_n_o055_1_1_b_n_o055_aba227d4dc3ef4be7fbbd1a4a42e8b3cb} 
+get\+\_\+calibration\+\_\+status (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the calibration status of the sensor.\end{DoxyVerb}
+ \Hypertarget{class_b_n_o055_1_1_b_n_o055_a65c36a8ac62c4f0fea0001b4f5f36b7e}\index{BNO055@{BNO055}!get\_calibration\_status\_values@{get\_calibration\_status\_values}}
+\index{get\_calibration\_status\_values@{get\_calibration\_status\_values}!BNO055@{BNO055}}
+\doxysubsubsection{\texorpdfstring{get\_calibration\_status\_values()}{get\_calibration\_status\_values()}}
+{\footnotesize\ttfamily \label{class_b_n_o055_1_1_b_n_o055_a65c36a8ac62c4f0fea0001b4f5f36b7e} 
+get\+\_\+calibration\+\_\+status\+\_\+values (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the calibration status of the sensor.\end{DoxyVerb}
+ \Hypertarget{class_b_n_o055_1_1_b_n_o055_a862ee411e3e07e4baf89103431361a99}\index{BNO055@{BNO055}!get\_euler\_angles@{get\_euler\_angles}}
+\index{get\_euler\_angles@{get\_euler\_angles}!BNO055@{BNO055}}
+\doxysubsubsection{\texorpdfstring{get\_euler\_angles()}{get\_euler\_angles()}}
+{\footnotesize\ttfamily \label{class_b_n_o055_1_1_b_n_o055_a862ee411e3e07e4baf89103431361a99} 
+get\+\_\+euler\+\_\+angles (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get Euler angles (heading, roll, pitch) in degrees.\end{DoxyVerb}
+ \Hypertarget{class_b_n_o055_1_1_b_n_o055_ab15280644fb5f947335b805300d86d7e}\index{BNO055@{BNO055}!get\_heading@{get\_heading}}
+\index{get\_heading@{get\_heading}!BNO055@{BNO055}}
+\doxysubsubsection{\texorpdfstring{get\_heading()}{get\_heading()}}
+{\footnotesize\ttfamily \label{class_b_n_o055_1_1_b_n_o055_ab15280644fb5f947335b805300d86d7e} 
+get\+\_\+heading (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the heading (yaw) angle in degrees.\end{DoxyVerb}
+ \Hypertarget{class_b_n_o055_1_1_b_n_o055_ae2cfe6d53b821c739755ecd0dfce6eec}\index{BNO055@{BNO055}!read\_calibration\_data@{read\_calibration\_data}}
+\index{read\_calibration\_data@{read\_calibration\_data}!BNO055@{BNO055}}
+\doxysubsubsection{\texorpdfstring{read\_calibration\_data()}{read\_calibration\_data()}}
+{\footnotesize\ttfamily \label{class_b_n_o055_1_1_b_n_o055_ae2cfe6d53b821c739755ecd0dfce6eec} 
+read\+\_\+calibration\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read calibration data from the sensor.\end{DoxyVerb}
+ \Hypertarget{class_b_n_o055_1_1_b_n_o055_a03fa8ba205552edf04a92bd35fa85061}\index{BNO055@{BNO055}!write\_calibration\_data@{write\_calibration\_data}}
+\index{write\_calibration\_data@{write\_calibration\_data}!BNO055@{BNO055}}
+\doxysubsubsection{\texorpdfstring{write\_calibration\_data()}{write\_calibration\_data()}}
+{\footnotesize\ttfamily \label{class_b_n_o055_1_1_b_n_o055_a03fa8ba205552edf04a92bd35fa85061} 
+write\+\_\+calibration\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{data}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Write calibration data to the sensor.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_b_n_o055_8py}{BNO055.\+py}}\end{DoxyCompactItemize}

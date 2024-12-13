@@ -1,0 +1,86 @@
+\doxysection{Line\+Sensor\+Array Class Reference}
+\hypertarget{class_line_sensor_1_1_line_sensor_array}{}\label{class_line_sensor_1_1_line_sensor_array}\index{LineSensorArray@{LineSensorArray}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_line_sensor_1_1_line_sensor_array_a384b4d6227abec6ba9051d4f7eccd9b4}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Even\+\_\+pin, Odd\+\_\+pin, Pin\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_line_sensor_1_1_line_sensor_array}{Line\+Sensor\+Array} Object. \end{DoxyCompactList}\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_a9f637a1988d9d38558869a5920d5d824}\label{class_line_sensor_1_1_line_sensor_array_a9f637a1988d9d38558869a5920d5d824} 
+{\bfseries get\+\_\+line\+\_\+position} (self)
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_ad0565eecb5e431630081a6ed0f440abc}\label{class_line_sensor_1_1_line_sensor_array_ad0565eecb5e431630081a6ed0f440abc} 
+{\bfseries update\+\_\+line\+\_\+position} (self)
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_a63d63e49b7e1d2b568412e48acaf5715}\label{class_line_sensor_1_1_line_sensor_array_a63d63e49b7e1d2b568412e48acaf5715} 
+{\bfseries threshold\+\_\+linear} (self, sensor\+\_\+reading, sensor)
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_aea18af444930d78a1d4855accab74926}\label{class_line_sensor_1_1_line_sensor_array_aea18af444930d78a1d4855accab74926} 
+{\bfseries third\+\_\+order} (self, x, a, b, c, d)
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_aac9384d4a6c42439b76f2aceb6a6ce01}\label{class_line_sensor_1_1_line_sensor_array_aac9384d4a6c42439b76f2aceb6a6ce01} 
+{\bfseries linearize} (self, value, sensor)
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_ad54792d41f5676ee4038be95d0482e5d}\label{class_line_sensor_1_1_line_sensor_array_ad54792d41f5676ee4038be95d0482e5d} 
+{\bfseries threshold} (self, linear\+\_\+reading)
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_a161cafd55645730c0af4e889cdc9c8d1}\label{class_line_sensor_1_1_line_sensor_array_a161cafd55645730c0af4e889cdc9c8d1} 
+{\bfseries centroid} (self, readings)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{class_line_sensor_1_1_line_sensor_array_a96cad8f33b37886726a9ef851cc8e014}{SENSOR\+\_\+\+LIST}}
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_a7539efd224683108210221739b02973a}\label{class_line_sensor_1_1_line_sensor_array_a7539efd224683108210221739b02973a} 
+int {\bfseries LINE\+\_\+\+POSITION} = 0
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_aabcddb6cf84ada3cc34693f26ee73bf8}\label{class_line_sensor_1_1_line_sensor_array_aabcddb6cf84ada3cc34693f26ee73bf8} 
+int {\bfseries NUM\+\_\+\+SENSORS} = 8
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_a3217823ad1e9ae328d595d0a524c3ef0}\label{class_line_sensor_1_1_line_sensor_array_a3217823ad1e9ae328d595d0a524c3ef0} 
+float {\bfseries ALL\+\_\+\+ON\+\_\+\+PERCENT} = 0.\+85
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_a384b4d6227abec6ba9051d4f7eccd9b4}\index{LineSensorArray@{LineSensorArray}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!LineSensorArray@{LineSensorArray}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_array_a384b4d6227abec6ba9051d4f7eccd9b4} 
+\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{Even\+\_\+pin}{, }\item[{}]{Odd\+\_\+pin}{, }\item[{}]{Pin\+\_\+list}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the \doxylink{class_line_sensor_1_1_line_sensor_array}{Line\+Sensor\+Array} Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Line\+\_\+\+Sensor\+\_\+\+Array} & an array of \doxylink{class_line_sensor_1_1_line_sensor}{Line\+Sensor} objects \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_line_sensor_1_1_line_sensor_array_a96cad8f33b37886726a9ef851cc8e014}\index{LineSensorArray@{LineSensorArray}!SENSOR\_LIST@{SENSOR\_LIST}}
+\index{SENSOR\_LIST@{SENSOR\_LIST}!LineSensorArray@{LineSensorArray}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_LIST}{SENSOR\_LIST}}
+{\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_array_a96cad8f33b37886726a9ef851cc8e014} 
+list SENSOR\+\_\+\+LIST}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [\mbox{\hyperlink{namespace_line_sensor}{LineSensor}}(Pin\_list[0],\ Even\_pin),\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_line_sensor}{LineSensor}}(Pin\_list[1],\ Odd\_pin),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_line_sensor}{LineSensor}}(Pin\_list[2],\ Even\_pin),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_line_sensor}{LineSensor}}(Pin\_list[3],\ Odd\_pin),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_line_sensor}{LineSensor}}(Pin\_list[4],\ Even\_pin),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_line_sensor}{LineSensor}}(Pin\_list[5],\ Odd\_pin),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_line_sensor}{LineSensor}}(Pin\_list[6],\ Even\_pin),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_line_sensor}{LineSensor}}(Pin\_list[7],\ Odd\_pin)]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_line_sensor_8py}{Line\+Sensor.\+py}}\end{DoxyCompactItemize}

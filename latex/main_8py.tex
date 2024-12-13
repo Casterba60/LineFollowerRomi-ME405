@@ -1,0 +1,179 @@
+\doxysection{main.\+py File Reference}
+\hypertarget{main_8py}{}\label{main_8py}\index{main.py@{main.py}}
+
+
+This file is the main file, containing all needed dependencies, initializing all required objects as well as the scheduler.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8py_a416e7caee14f11750916d2d682cf4078}\label{main_8py_a416e7caee14f11750916d2d682cf4078} 
+{\bfseries test\+\_\+imu} (imu)
+\item 
+\Hypertarget{main_8py_a64ab16ae1ce668c2c582885d75d9723d}\label{main_8py_a64ab16ae1ce668c2c582885d75d9723d} 
+{\bfseries read\+\_\+imu\+\_\+cal} (imu)
+\item 
+\Hypertarget{main_8py_a79e8af72b551a5bc0290a7c7eaf6101a}\label{main_8py_a79e8af72b551a5bc0290a7c7eaf6101a} 
+{\bfseries write\+\_\+imu\+\_\+cal} (imu)
+\item 
+\Hypertarget{main_8py_aaa941f1e0a25e92fc77bc11426f102b6}\label{main_8py_aaa941f1e0a25e92fc77bc11426f102b6} 
+{\bfseries update\+Button} (pin)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8py_a8a68eddda56fb31687e1a4c756ebdea7}\label{main_8py_a8a68eddda56fb31687e1a4c756ebdea7} 
+int {\bfseries ENCPERIOD} = 20
+\item 
+\Hypertarget{main_8py_ad1a0e55be710cbc7cafd77a195a5be88}\label{main_8py_ad1a0e55be710cbc7cafd77a195a5be88} 
+int {\bfseries CONTPERIOD} = 20
+\item 
+\Hypertarget{main_8py_aff7cb6ccbf56e459a6c76285d8d6a79d}\label{main_8py_aff7cb6ccbf56e459a6c76285d8d6a79d} 
+int {\bfseries FSMPERIOD} = 40
+\item 
+\Hypertarget{main_8py_affdf262d58c1adbd22c90f3d23c0fb9f}\label{main_8py_affdf262d58c1adbd22c90f3d23c0fb9f} 
+{\bfseries button\+Status} = \mbox{\hyperlink{classtask__share_1_1_share}{task\+\_\+share.\+Share}}("{}H"{},name="{}button status"{},thread\+\_\+protect = True)
+\item 
+\Hypertarget{main_8py_a5b65d9af1f9d79f4cadd9faec6e9aec6}\label{main_8py_a5b65d9af1f9d79f4cadd9faec6e9aec6} 
+{\bfseries initial\+Heading} = \mbox{\hyperlink{classtask__share_1_1_share}{task\+\_\+share.\+Share}}("{}H"{},name="{}initial heading"{},thread\+\_\+protect = True)
+\item 
+\Hypertarget{main_8py_adfcc0266093d3aa14fba1df0f3be3b0f}\label{main_8py_adfcc0266093d3aa14fba1df0f3be3b0f} 
+{\bfseries current\+Heading} = \mbox{\hyperlink{classtask__share_1_1_share}{task\+\_\+share.\+Share}}("{}H"{},name="{}current heading"{},thread\+\_\+protect=True)
+\item 
+\Hypertarget{main_8py_aad77abbd558b072517b9f8ea41195228}\label{main_8py_aad77abbd558b072517b9f8ea41195228} 
+{\bfseries tim\+\_\+3} = pyb.\+Timer(3, freq = 20\+\_\+000)
+\item 
+\Hypertarget{main_8py_a8f54b8be943011a5cdadaf0513a3fe75}\label{main_8py_a8f54b8be943011a5cdadaf0513a3fe75} 
+{\bfseries tim\+\_\+4} = pyb.\+Timer(4, freq = 20\+\_\+000)
+\item 
+\Hypertarget{main_8py_a17eea1bdf7feb2502f1f646be64399b5}\label{main_8py_a17eea1bdf7feb2502f1f646be64399b5} 
+{\bfseries right\+\_\+\+Motor} = \mbox{\hyperlink{class_romi__motor_1_1_romi__motor}{Romi\+\_\+motor}}(pyb.\+Pin.\+cpu.\+C0, pyb.\+Pin.\+cpu.\+A4, pyb.\+Pin.\+cpu.\+B0, tim\+\_\+3, 3)
+\item 
+\Hypertarget{main_8py_a686a6f9f7d7f8bf413e96c71c950d635}\label{main_8py_a686a6f9f7d7f8bf413e96c71c950d635} 
+{\bfseries left\+\_\+\+Motor} = \mbox{\hyperlink{class_romi__motor_1_1_romi__motor}{Romi\+\_\+motor}}(pyb.\+Pin.\+cpu.\+B5, pyb.\+Pin.\+cpu.\+B3, pyb.\+Pin.\+cpu.\+B6, tim\+\_\+4, 1)
+\item 
+\Hypertarget{main_8py_aee4f72a7e26db5e4b6ae29fe467082b5}\label{main_8py_aee4f72a7e26db5e4b6ae29fe467082b5} 
+{\bfseries tim\+\_\+1} = pyb.\+Timer(1,period=65535,prescaler=0)
+\item 
+\Hypertarget{main_8py_a2cfc57acd6e89d57ad70ff3f965be5f1}\label{main_8py_a2cfc57acd6e89d57ad70ff3f965be5f1} 
+{\bfseries tim\+\_\+2} = pyb.\+Timer(2,period=65535,prescaler=0)
+\item 
+\Hypertarget{main_8py_a06e512189e1ebc8613bacf16a21b9e7b}\label{main_8py_a06e512189e1ebc8613bacf16a21b9e7b} 
+{\bfseries left\+\_\+\+Encoder} = \mbox{\hyperlink{classencoder_1_1_encoder}{Encoder}}(pyb.\+Pin.\+cpu.\+A8, pyb.\+Pin.\+cpu.\+A9, tim\+\_\+1)
+\item 
+\Hypertarget{main_8py_ada2890903e136d6b3ef3fb8f1f4a6d4d}\label{main_8py_ada2890903e136d6b3ef3fb8f1f4a6d4d} 
+{\bfseries right\+\_\+\+Encoder} = \mbox{\hyperlink{classencoder_1_1_encoder}{Encoder}}(pyb.\+Pin.\+cpu.\+A0, pyb.\+Pin.\+cpu.\+A1,tim\+\_\+2)
+\item 
+\Hypertarget{main_8py_aeda5ea03e19efdf2b34360ecd40533bc}\label{main_8py_aeda5ea03e19efdf2b34360ecd40533bc} 
+{\bfseries left\+\_\+\+Controller} = \mbox{\hyperlink{classcontroller_1_1controller}{controller}}(left\+\_\+\+Motor,left\+\_\+\+Encoder,ENCPERIOD)
+\item 
+\Hypertarget{main_8py_ae3504f6ed845b8532f93b569c035d27d}\label{main_8py_ae3504f6ed845b8532f93b569c035d27d} 
+{\bfseries right\+\_\+\+Controller} = \mbox{\hyperlink{classcontroller_1_1controller}{controller}}(right\+\_\+\+Motor,right\+\_\+\+Encoder,ENCPERIOD)
+\item 
+\Hypertarget{main_8py_a14139799dd4b2fc41ecb6cb14936322f}\label{main_8py_a14139799dd4b2fc41ecb6cb14936322f} 
+{\bfseries button} = pyb.\+Ext\+Int(pyb.\+Pin.\+cpu.\+C13, pyb.\+Ext\+Int.\+IRQ\+\_\+\+FALLING, pyb.\+Pin.\+PULL\+\_\+\+NONE, update\+Button)
+\item 
+\mbox{\hyperlink{main_8py_a1d66e374f433f6765ef8a3ba7ca83d8d}{line\+Array}}
+\item 
+\mbox{\hyperlink{main_8py_ae74f161fcc2eabc5793885a73fbb377d}{obstacle\+Detector}}
+\item 
+\Hypertarget{main_8py_afdf78162f44eb7efcc12e3c2740641bf}\label{main_8py_afdf78162f44eb7efcc12e3c2740641bf} 
+int {\bfseries i2c\+\_\+bus} = 1
+\item 
+\Hypertarget{main_8py_a1c63e66c94a8d22300990887e84ad6fc}\label{main_8py_a1c63e66c94a8d22300990887e84ad6fc} 
+{\bfseries imu} = \mbox{\hyperlink{class_b_n_o055_1_1_b_n_o055}{BNO055}}(i2c\+\_\+bus)
+\item 
+\Hypertarget{main_8py_a24c4abd48efaa77b8878da6a70258dd1}\label{main_8py_a24c4abd48efaa77b8878da6a70258dd1} 
+{\bfseries romi\+\_\+obj} = \mbox{\hyperlink{classstatemachine_1_1statemachine}{statemachine}}(left\+\_\+\+Controller,right\+\_\+\+Controller,imu,button\+Status,line\+Array,obstacle\+Detector)
+\item 
+\mbox{\hyperlink{main_8py_a0700e5983539b16e9e586b9cc18c6601}{Update\+Left\+Encoder\+Task}}
+\item 
+\mbox{\hyperlink{main_8py_a5a989ad6eefa893e34008051f7859627}{Update\+Right\+Encoder\+Task}}
+\item 
+\Hypertarget{main_8py_a8e0d75c20d48e639b79e033f313b44af}\label{main_8py_a8e0d75c20d48e639b79e033f313b44af} 
+{\bfseries Right\+Motor\+Controller} = \mbox{\hyperlink{classcotask_1_1_task}{cotask.\+Task}}(right\+\_\+\+Controller.\+run,name="{}Right Controller"{}, priority=1, period=CONTPERIOD,profile=True,trace=True)
+\item 
+\Hypertarget{main_8py_a869f43e6a3aa42901a4c5cb5af3cfe0a}\label{main_8py_a869f43e6a3aa42901a4c5cb5af3cfe0a} 
+{\bfseries Left\+Motor\+Controller} = \mbox{\hyperlink{classcotask_1_1_task}{cotask.\+Task}}(left\+\_\+\+Controller.\+run,name="{}Left Controller"{}, priority=1, period=CONTPERIOD,profile=True,trace=True)
+\item 
+\Hypertarget{main_8py_a2aab568cd1f02e7cd9fd6c7f87e361d1}\label{main_8py_a2aab568cd1f02e7cd9fd6c7f87e361d1} 
+{\bfseries FSM} = \mbox{\hyperlink{classcotask_1_1_task}{cotask.\+Task}}(romi\+\_\+obj.\+FSM,name="{}FSM control"{},priority=0,period=FSMPERIOD,profile=True,trace=False)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file is the main file, containing all needed dependencies, initializing all required objects as well as the scheduler. 
+
+This program is built on the micropython library. All required Romi objects, which include\+: 2 motors, 2 encoders, 2 motor controllers, 1 IR sensor array containing 8 IR sensors, a 6 sensor bump sensor array, and 1 IMU are instantiated in this file. The details of each of these objects is detailed in their respective files These objects are all intregated into a set of tasks which run on the scheduler. These tasks are\+: The overacrching Finite State Machine, updating the encoder positions, and running the individual motor controllers
+
+\begin{DoxyAuthor}{Author}
+Cole Sterba, Devon Bolt 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/Nov-\/25 Approximate date of creation of file 
+
+2024-\/Dec-\/12 Final tuning completed 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+This program is copyright (c) 2024 by C Sterba and D Bolt and released under the GNU Public License, version 3.\+0.
+\end{DoxyCopyright}
+It is intended for educational use only, but its use is not limited thereto. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}\+AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8py_a1d66e374f433f6765ef8a3ba7ca83d8d}\index{main.py@{main.py}!lineArray@{lineArray}}
+\index{lineArray@{lineArray}!main.py@{main.py}}
+\doxysubsubsection{\texorpdfstring{lineArray}{lineArray}}
+{\footnotesize\ttfamily \label{main_8py_a1d66e374f433f6765ef8a3ba7ca83d8d} 
+line\+Array}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ LineSensorArray(pyb.Pin.cpu.A15,\ }
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pyb.Pin.cpu.B2,\ }
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [pyb.Pin.cpu.C12,\ }
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pyb.Pin.cpu.D2,\ }
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pyb.Pin.cpu.C10,\ \ }
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pyb.Pin.cpu.C11,\ }
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pyb.Pin.cpu.B13,\ }
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pyb.Pin.cpu.B14,\ }
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pyb.Pin.cpu.B15,\ }
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pyb.Pin.cpu.B1])}
+
+\end{DoxyCode}
+\Hypertarget{main_8py_ae74f161fcc2eabc5793885a73fbb377d}\index{main.py@{main.py}!obstacleDetector@{obstacleDetector}}
+\index{obstacleDetector@{obstacleDetector}!main.py@{main.py}}
+\doxysubsubsection{\texorpdfstring{obstacleDetector}{obstacleDetector}}
+{\footnotesize\ttfamily \label{main_8py_ae74f161fcc2eabc5793885a73fbb377d} 
+obstacle\+Detector}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ ObstacleDetection([pyb.Pin.cpu.A5,\ \ pyb.Pin.cpu.A6,\ \ pyb.Pin.cpu.A7,\ }
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pyb.Pin.cpu.C5,\ pyb.Pin.cpu.B11,\ pyb.Pin.cpu.B12])}
+
+\end{DoxyCode}
+\Hypertarget{main_8py_a0700e5983539b16e9e586b9cc18c6601}\index{main.py@{main.py}!UpdateLeftEncoderTask@{UpdateLeftEncoderTask}}
+\index{UpdateLeftEncoderTask@{UpdateLeftEncoderTask}!main.py@{main.py}}
+\doxysubsubsection{\texorpdfstring{UpdateLeftEncoderTask}{UpdateLeftEncoderTask}}
+{\footnotesize\ttfamily \label{main_8py_a0700e5983539b16e9e586b9cc18c6601} 
+Update\+Left\+Encoder\+Task}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \mbox{\hyperlink{classcotask_1_1_task}{cotask.Task}}(left\_Encoder.update,name=\textcolor{stringliteral}{"{}Update\ Left\ Encoder"{}},\ priority=1,\ period=ENCPERIOD,}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ profile=\textcolor{keyword}{True},\ trace=\textcolor{keyword}{False})}
+
+\end{DoxyCode}
+\Hypertarget{main_8py_a5a989ad6eefa893e34008051f7859627}\index{main.py@{main.py}!UpdateRightEncoderTask@{UpdateRightEncoderTask}}
+\index{UpdateRightEncoderTask@{UpdateRightEncoderTask}!main.py@{main.py}}
+\doxysubsubsection{\texorpdfstring{UpdateRightEncoderTask}{UpdateRightEncoderTask}}
+{\footnotesize\ttfamily \label{main_8py_a5a989ad6eefa893e34008051f7859627} 
+Update\+Right\+Encoder\+Task}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \mbox{\hyperlink{classcotask_1_1_task}{cotask.Task}}(right\_Encoder.update,name=\textcolor{stringliteral}{"{}Update\ Right\ Encoder"{}},\ priority=1,\ period=ENCPERIOD,}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ profile=\textcolor{keyword}{True},\ trace=\textcolor{keyword}{False})}
+
+\end{DoxyCode}

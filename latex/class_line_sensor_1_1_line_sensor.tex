@@ -1,0 +1,56 @@
+\doxysection{Line\+Sensor Class Reference}
+\hypertarget{class_line_sensor_1_1_line_sensor}{}\label{class_line_sensor_1_1_line_sensor}\index{LineSensor@{LineSensor}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_line_sensor_1_1_line_sensor_a2eef6dc14f5b3e2beb43b9af326d14eb}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, Value\+\_\+pin, LED\+\_\+pin)
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_line_sensor_1_1_line_sensor}{Line\+Sensor} Object. \end{DoxyCompactList}\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_a4a20ecec2cad37001a8b3551f63f0045}\label{class_line_sensor_1_1_line_sensor_a4a20ecec2cad37001a8b3551f63f0045} 
+{\bfseries update\+\_\+value} (self)
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_aabe132f7ac38639bfd0dac75a9c38c9c}\label{class_line_sensor_1_1_line_sensor_aabe132f7ac38639bfd0dac75a9c38c9c} 
+{\bfseries get\+\_\+value} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_afd45b703fab84ada7477f4770e5bdc2f}\label{class_line_sensor_1_1_line_sensor_afd45b703fab84ada7477f4770e5bdc2f} 
+{\bfseries VALUE\+\_\+\+PIN\+\_\+\+NUMBER} = Value\+\_\+pin
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_a4214c22fa2e8cd91f8e6fa8ec79ab6f8}\label{class_line_sensor_1_1_line_sensor_a4214c22fa2e8cd91f8e6fa8ec79ab6f8} 
+{\bfseries VALUE\+\_\+\+PIN} = Pin(Value\+\_\+pin, mode=Pin.\+OUT\+\_\+\+PP)
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_a732c48ac595185b8e0e54eefcfb9cd73}\label{class_line_sensor_1_1_line_sensor_a732c48ac595185b8e0e54eefcfb9cd73} 
+{\bfseries LED\+\_\+\+PIN} = Pin(LED\+\_\+pin, mode=Pin.\+OUT\+\_\+\+PP)
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_aa7c31edd35f0d8384e0e82808d2dfa22}\label{class_line_sensor_1_1_line_sensor_aa7c31edd35f0d8384e0e82808d2dfa22} 
+int {\bfseries MAX\+\_\+\+DECAY\+\_\+\+TIME} = 2000
+\item 
+\Hypertarget{class_line_sensor_1_1_line_sensor_a8ecb953637f66f7ca9d3fb74949978c8}\label{class_line_sensor_1_1_line_sensor_a8ecb953637f66f7ca9d3fb74949978c8} 
+{\bfseries VALUE} = decay\+\_\+time
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_line_sensor_1_1_line_sensor_a2eef6dc14f5b3e2beb43b9af326d14eb}\index{LineSensor@{LineSensor}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!LineSensor@{LineSensor}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_a2eef6dc14f5b3e2beb43b9af326d14eb} 
+\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{Value\+\_\+pin}{, }\item[{}]{LED\+\_\+pin}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the \doxylink{class_line_sensor_1_1_line_sensor}{Line\+Sensor} Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Value\+\_\+\+Pin} & A Nucleo pin that will be connected to the analog pin of the line sensor. Output capability to drive the sensor high to reset it and the input to measure how long it takes to decay. \\
+\hline
+{\em LED\+\_\+pin} & A Nucleo pin to trigger the LED to turn on. This will be the same for multiple other sensors. Connects to the CTRL EVEN or CTRL ODD pin of the pine sensor array \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_line_sensor_8py}{Line\+Sensor.\+py}}\end{DoxyCompactItemize}

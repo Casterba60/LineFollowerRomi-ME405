@@ -1,0 +1,35 @@
+\doxysection{Line\+Sensor.\+py File Reference}
+\hypertarget{_line_sensor_8py}{}\label{_line_sensor_8py}\index{LineSensor.py@{LineSensor.py}}
+
+
+This file is the Romi Robot Line Sensor class.  
+
+
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_line_sensor_1_1_line_sensor}{Line\+Sensor}}
+\item 
+class \mbox{\hyperlink{class_line_sensor_1_1_line_sensor_array}{Line\+Sensor\+Array}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file is the Romi Robot Line Sensor class. 
+
+The Line Sensor is a QTR-\/8\+RC Reflectance Sensor. The Class initializes required pins and creates methods required to properly utilize the encoders
+
+The Line Sensor functionality relies on 2 nested classes. The {\ttfamily Line\+Sensor} class builds out functionality for one individual sensor, where the {\ttfamily Line\+Sensor\+Array} class combines 8 Line\+Sensor objects to create functionality as a singular object. For the {\ttfamily Line\+Sensor} class, the {\ttfamily update\+\_\+value} method is used to trigger the sensor to take a reading. The {\ttfamily get\+\_\+value} method returns the most recent reading. The {\ttfamily Line\+Sensor\+Array} class uses the {\ttfamily update\+\_\+line\+\_\+position} method to return a value between -\/1 and 1 which represents the position of a line along the array, zero being centered. In order to do this, readings are linearized and have thresholds applied based on testing done. The {\ttfamily get\+\_\+line\+\_\+position} method returns this value.
+
+\begin{DoxyAuthor}{Author}
+Cole Sterba, Devon Bolt 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/Nov-\/12 Approximate date of creation of file 
+
+2024-\/Dec-\/12 Final tuning completed 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+This program is copyright (c) 2024 by C Sterba and D Bolt and released under the GNU Public License, version 3.\+0.
+\end{DoxyCopyright}
+It is intended for educational use only, but its use is not limited thereto. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}\+AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

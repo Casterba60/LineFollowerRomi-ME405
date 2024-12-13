@@ -1,0 +1,118 @@
+\doxysection{Encoder Class Reference}
+\hypertarget{classencoder_1_1_encoder}{}\label{classencoder_1_1_encoder}\index{Encoder@{Encoder}}
+
+
+Interface with quadrature encoders.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_a7267f62d73f443ba9484b182fab2c34a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, CHA\+\_\+pin, CHB\+\_\+pin, Enc\+\_\+\+Timer)
+\begin{DoxyCompactList}\small\item\em Constructs an encoder object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_ac55748ac7fd3fa21f34f8cd670458665}{update}} (self, tim=None)
+\begin{DoxyCompactList}\small\item\em Updates encoder position and delta. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_ae07dc73afeb4ff120c838fe5f53ac883}{get\+\_\+position}} (self)
+\begin{DoxyCompactList}\small\item\em Gets the most recent encoder position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_a825c2bb6fd2330753314946c489d53fa}{get\+\_\+delta}} (self)
+\begin{DoxyCompactList}\small\item\em Gets the most recent encoder delta ~\newline
+ \end{DoxyCompactList}\item 
+\Hypertarget{classencoder_1_1_encoder_a4c40b8a4d7b7c9fa4a840b4a37acb85b}\label{classencoder_1_1_encoder_a4c40b8a4d7b7c9fa4a840b4a37acb85b} 
+{\bfseries zero} (self)
+\begin{DoxyCompactList}\small\item\em Resets the encoder position to zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classencoder_1_1_encoder_af5742a52e4f01755596b15e4d3ce4203}\label{classencoder_1_1_encoder_af5742a52e4f01755596b15e4d3ce4203} 
+{\bfseries TIM} = Enc\+\_\+\+Timer
+\item 
+\Hypertarget{classencoder_1_1_encoder_abe2ae24a24e37904dc011ec64f768b7c}\label{classencoder_1_1_encoder_abe2ae24a24e37904dc011ec64f768b7c} 
+{\bfseries CHA} = self.\+TIM.\+channel(1,pin=CHA\+\_\+pin, mode=Enc\+\_\+\+Timer.\+ENC\+\_\+\+AB)
+\item 
+\Hypertarget{classencoder_1_1_encoder_a284ef0d4e6b22e13960c44eab62edff3}\label{classencoder_1_1_encoder_a284ef0d4e6b22e13960c44eab62edff3} 
+{\bfseries CHB} = self.\+TIM.\+channel(2,pin=CHB\+\_\+pin, mode=Enc\+\_\+\+Timer.\+ENC\+\_\+\+AB)
+\item 
+\Hypertarget{classencoder_1_1_encoder_a401e942526aac47cef94f478182486e7}\label{classencoder_1_1_encoder_a401e942526aac47cef94f478182486e7} 
+int {\bfseries position} = 0
+\item 
+\Hypertarget{classencoder_1_1_encoder_ab6d8df8ffd0888ed97f112eac04fb2c0}\label{classencoder_1_1_encoder_ab6d8df8ffd0888ed97f112eac04fb2c0} 
+int {\bfseries current\+\_\+pos} = 0
+\item 
+\Hypertarget{classencoder_1_1_encoder_acbd08537ee7f241b3e5f36cef6a5af9e}\label{classencoder_1_1_encoder_acbd08537ee7f241b3e5f36cef6a5af9e} 
+int {\bfseries last\+\_\+pos} = 0
+\item 
+\Hypertarget{classencoder_1_1_encoder_a1dfcb70b9229f2da17dd5922b87ecf2c}\label{classencoder_1_1_encoder_a1dfcb70b9229f2da17dd5922b87ecf2c} 
+int {\bfseries delta} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface with quadrature encoders. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classencoder_1_1_encoder_a7267f62d73f443ba9484b182fab2c34a}\index{Encoder@{Encoder}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Encoder@{Encoder}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a7267f62d73f443ba9484b182fab2c34a} 
+\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{CHA\+\_\+pin}{, }\item[{}]{CHB\+\_\+pin}{, }\item[{}]{Enc\+\_\+\+Timer}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an encoder object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em CHA} & 1st channel of the encoder output, changes state everytime the encoder passes by it \\
+\hline
+{\em CHB} & 2nd channel of the encoder output, changes state everytime the encoder passes by it, 90 degrees out of phase with CHA \\
+\hline
+{\em TIM} & timer to count the encoder ticks \\
+\hline
+{\em INT\+\_\+\+TIM} & Timer that instructs the object when to check for a new position \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classencoder_1_1_encoder_a825c2bb6fd2330753314946c489d53fa}\index{Encoder@{Encoder}!get\_delta@{get\_delta}}
+\index{get\_delta@{get\_delta}!Encoder@{Encoder}}
+\doxysubsubsection{\texorpdfstring{get\_delta()}{get\_delta()}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a825c2bb6fd2330753314946c489d53fa} 
+get\+\_\+delta (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Gets the most recent encoder delta ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classencoder_1_1_encoder_ae07dc73afeb4ff120c838fe5f53ac883}\index{Encoder@{Encoder}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!Encoder@{Encoder}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_ae07dc73afeb4ff120c838fe5f53ac883} 
+get\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Gets the most recent encoder position. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classencoder_1_1_encoder_ac55748ac7fd3fa21f34f8cd670458665}\index{Encoder@{Encoder}!update@{update}}
+\index{update@{update}!Encoder@{Encoder}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_ac55748ac7fd3fa21f34f8cd670458665} 
+update (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{tim}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Updates encoder position and delta. 
+
+The delta describes the position of the encoder relative to the previously collected position 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{encoder_8py}{encoder.\+py}}\end{DoxyCompactItemize}
