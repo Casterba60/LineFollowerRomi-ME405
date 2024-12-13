@@ -64,9 +64,9 @@ Initializes the \doxylink{class_line_sensor_1_1_line_sensor_array}{Line\+Sensor\
 {\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_array_a161cafd55645730c0af4e889cdc9c8d1} 
 centroid (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{readings}{}\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}@param readings: an array of modified sensor readings
-Calculates the centroid of the readings by finding a weighted sum and dividing it by a regular sum of the readings
+\begin{DoxyVerb}Calculates the centroid of the readings by finding a weighted sum and dividing it by a regular sum of the readings
 Returns a value between -1 and 1
+@param readings: an array of modified sensor readings
 \end{DoxyVerb}
  \Hypertarget{class_line_sensor_1_1_line_sensor_array_a9f637a1988d9d38558869a5920d5d824}\index{LineSensorArray@{LineSensorArray}!get\_line\_position@{get\_line\_position}}
 \index{get\_line\_position@{get\_line\_position}!LineSensorArray@{LineSensorArray}}
@@ -112,9 +112,9 @@ Scale is 0 -> line sensor MAX_DECAY_TIME
 {\footnotesize\ttfamily \label{class_line_sensor_1_1_line_sensor_array_a63d63e49b7e1d2b568412e48acaf5715} 
 threshold\+\_\+linear (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{sensor\+\_\+reading}{, }\item[{}]{sensor}{}\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}@param sensor_reading: A LineSensor reading (values from 0-MAX_DECAY_TIME)
+\begin{DoxyVerb}Returns a linearized and thresholded value based on calibration data
+@param sensor_reading: A LineSensor reading (values from 0-MAX_DECAY_TIME)
 @param sensor: the number of the sensor the reading came from. Used for specific calibration.
-Returns a linearized and thresholded value based on calibration data
 \end{DoxyVerb}
  \Hypertarget{class_line_sensor_1_1_line_sensor_array_ad0565eecb5e431630081a6ed0f440abc}\index{LineSensorArray@{LineSensorArray}!update\_line\_position@{update\_line\_position}}
 \index{update\_line\_position@{update\_line\_position}!LineSensorArray@{LineSensorArray}}

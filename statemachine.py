@@ -45,7 +45,7 @@ import pyb #type: ignore
 import utime #type: ignore
 
 class statemachine:
-
+    '''!@brief Finite State Machine for handling of Romi's states'''
     def __init__ (self,left_controller,right_controller,IMU,buttonStatus,lineArray,obstacleDetection):
         self.debug = False
         self.left_controller = left_controller

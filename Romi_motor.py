@@ -32,7 +32,7 @@ from pyb import Pin, Timer # type: ignore
 import time
 
 class Romi_motor:
-
+    '''!@brief Romi motor class for interfacing with the onboard motors'''
     def __init__ (self, EN_Pin, Direction_Pin, Effort_Pin, PWM_tim, tim_channel):
         self.ENABLE = Pin(EN_Pin, mode=Pin.OUT_PP)
         self.EFFORT = Pin(Effort_Pin, mode=Pin.OUT_PP)

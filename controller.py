@@ -32,6 +32,7 @@ import pyb #type: ignore
 import utime #type: ignore
 
 class controller:
+    """!@brief PI controller to drive the motors on the Romi Motor"""
 
     def __init__ (self, motor, encoder,ENC_PERIOD):
         self.motor = motor

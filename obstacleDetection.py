@@ -32,6 +32,7 @@
 import pyb #type: ignore
 
 class ObstacleDetection:
+    '''!@brief This class interfaces with the bump sensors to detect obstacle collisions'''
     def __init__(self,bumpSensorPins):
         self.bumpPins = []
         for idx, pin in enumerate(bumpSensorPins):

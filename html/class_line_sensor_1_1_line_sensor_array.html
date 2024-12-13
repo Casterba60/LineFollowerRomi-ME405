@@ -198,9 +198,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>ALL_ON_PERCENT</b> =
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">@param readings: an array of modified sensor readings
-Calculates the centroid of the readings by finding a weighted sum and dividing it by a regular sum of the readings
+<pre class="fragment">Calculates the centroid of the readings by finding a weighted sum and dividing it by a regular sum of the readings
 Returns a value between -1 and 1
+@param readings: an array of modified sensor readings
 </pre> 
 </div>
 </div>
@@ -342,9 +342,9 @@ Scale is 0 -&gt; line sensor MAX_DECAY_TIME
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">@param sensor_reading: A LineSensor reading (values from 0-MAX_DECAY_TIME)
+<pre class="fragment">Returns a linearized and thresholded value based on calibration data
+@param sensor_reading: A LineSensor reading (values from 0-MAX_DECAY_TIME)
 @param sensor: the number of the sensor the reading came from. Used for specific calibration.
-Returns a linearized and thresholded value based on calibration data
 </pre> 
 </div>
 </div>

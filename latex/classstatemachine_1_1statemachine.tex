@@ -104,6 +104,9 @@ FSM (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
 heading\+Control (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{desired\+Heading}{, }\item[{}]{velocity}{, }\item[{}]{gain}{ = {\ttfamily 1/15}}\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}Drive motor speeds to maintain heading and correct for error (Proportional Control)
+@param desiredHeading the heading to maintain/drive to
+@param velocity linear velocity to maintain while correcting heading
+@param gain the gain from heading error to rotation speed
 \end{DoxyVerb}
  
 
