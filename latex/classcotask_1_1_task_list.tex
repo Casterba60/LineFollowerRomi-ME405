@@ -1,5 +1,5 @@
-\doxysection{Task\+List Class Reference}
-\hypertarget{classcotask_1_1_task_list}{}\label{classcotask_1_1_task_list}\index{TaskList@{TaskList}}
+\doxysection{cotask.\+Task\+List Class Reference}
+\hypertarget{classcotask_1_1_task_list}{}\label{classcotask_1_1_task_list}\index{cotask.TaskList@{cotask.TaskList}}
 
 
 A list of tasks used internally by the task scheduler.  
@@ -8,26 +8,26 @@ A list of tasks used internally by the task scheduler.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classcotask_1_1_task_list_abdd362d5f799ad16b5d6700efe590290}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\mbox{\hyperlink{classcotask_1_1_task_list_aad6d72c01326f1c869492c5643f2a42e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
 \begin{DoxyCompactList}\small\item\em Initialize the task list. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classcotask_1_1_task_list_a594089ac711c8879e59b4e18626c235d}{append}} (self, task)
+\mbox{\hyperlink{classcotask_1_1_task_list_ab6aaf44123a285f4355919a5a8229c39}{append}} (self, task)
 \begin{DoxyCompactList}\small\item\em Append a task to the task list. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classcotask_1_1_task_list_afbe28f6b1f2944805270bba4c813341d}{rr\+\_\+sched}} (self)
+\mbox{\hyperlink{classcotask_1_1_task_list_aa048a6b12954d03b8fbf78dff7ace907}{rr\+\_\+sched}} (self)
 \begin{DoxyCompactList}\small\item\em Run tasks in order, ignoring the tasks\textquotesingle{} priorities. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classcotask_1_1_task_list_a645a656c8d2e8ce3873d418c50435394}{pri\+\_\+sched}} (self)
+\mbox{\hyperlink{classcotask_1_1_task_list_a53819d1e25955560b7cb06bd21715966}{pri\+\_\+sched}} (self)
 \begin{DoxyCompactList}\small\item\em Run tasks according to their priorities. \end{DoxyCompactList}\item 
-\Hypertarget{classcotask_1_1_task_list_a61a1f3a6a4df93d491cd753f617782a2}\label{classcotask_1_1_task_list_a61a1f3a6a4df93d491cd753f617782a2} 
+\Hypertarget{classcotask_1_1_task_list_a425ca90daaae28550bf1b3aa2da018ab}\label{classcotask_1_1_task_list_a425ca90daaae28550bf1b3aa2da018ab} 
 {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
 \begin{DoxyCompactList}\small\item\em Create some diagnostic text showing the tasks in the task list. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Data Fields}
+\doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-list \mbox{\hyperlink{classcotask_1_1_task_list_a8ca5d8931eada8900c68c6f68f7130f1}{pri\+\_\+list}} = \mbox{[}$\,$\mbox{]}
+list \mbox{\hyperlink{classcotask_1_1_task_list_aac6e53cb4fec80455198ff85c85a4b51}{pri\+\_\+list}} = \mbox{[}$\,$\mbox{]}
 \begin{DoxyCompactList}\small\item\em The list of priority lists. \end{DoxyCompactList}\item 
-\Hypertarget{classcotask_1_1_task_list_a31f0e0fb57b54cd43925cd4f27075b71}\label{classcotask_1_1_task_list_a31f0e0fb57b54cd43925cd4f27075b71} 
+\Hypertarget{classcotask_1_1_task_list_a0cd55cefb4edf20e4d3aea2874727595}\label{classcotask_1_1_task_list_a0cd55cefb4edf20e4d3aea2874727595} 
 int {\bfseries pri\+\_\+list} = 2
 \item 
-\Hypertarget{classcotask_1_1_task_list_a8e1881f49da6ce92da1d2d662d31eb85}\label{classcotask_1_1_task_list_a8e1881f49da6ce92da1d2d662d31eb85} 
+\Hypertarget{classcotask_1_1_task_list_a01f6943fdda428d8ee403e55b2ae9d05}\label{classcotask_1_1_task_list_a01f6943fdda428d8ee403e55b2ae9d05} 
 str {\bfseries pri\+\_\+list} = str(task) + \textquotesingle{}\textbackslash{}n\textquotesingle{}
 \end{DoxyCompactItemize}
 
@@ -40,11 +40,11 @@ This class holds the list of tasks which will be run by the task scheduler. The 
 The task list is sorted by priority so that the scheduler can efficiently look through the list to find the highest priority task which is ready to run at any given time. Tasks can also be scheduled in a simpler "{}round-\/robin"{} fashion. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classcotask_1_1_task_list_abdd362d5f799ad16b5d6700efe590290}\index{TaskList@{TaskList}!\_\_init\_\_@{\_\_init\_\_}}
-\index{\_\_init\_\_@{\_\_init\_\_}!TaskList@{TaskList}}
+\Hypertarget{classcotask_1_1_task_list_aad6d72c01326f1c869492c5643f2a42e}\index{cotask.TaskList@{cotask.TaskList}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!cotask.TaskList@{cotask.TaskList}}
 \doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
-{\footnotesize\ttfamily \label{classcotask_1_1_task_list_abdd362d5f799ad16b5d6700efe590290} 
-\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classcotask_1_1_task_list_aad6d72c01326f1c869492c5643f2a42e} 
+cotask.\+Task\+List.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
 
 
 
@@ -53,11 +53,11 @@ Initialize the task list.
 This creates the list of priorities in which tasks will be organized by priority. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classcotask_1_1_task_list_a594089ac711c8879e59b4e18626c235d}\index{TaskList@{TaskList}!append@{append}}
-\index{append@{append}!TaskList@{TaskList}}
+\Hypertarget{classcotask_1_1_task_list_ab6aaf44123a285f4355919a5a8229c39}\index{cotask.TaskList@{cotask.TaskList}!append@{append}}
+\index{append@{append}!cotask.TaskList@{cotask.TaskList}}
 \doxysubsubsection{\texorpdfstring{append()}{append()}}
-{\footnotesize\ttfamily \label{classcotask_1_1_task_list_a594089ac711c8879e59b4e18626c235d} 
-append (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{task}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classcotask_1_1_task_list_ab6aaf44123a285f4355919a5a8229c39} 
+cotask.\+Task\+List.\+append (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{task}{}\end{DoxyParamCaption})}
 
 
 
@@ -68,21 +68,21 @@ The list will be sorted by task priorities so that the scheduler can quickly fin
 {\em task} & The task to be appended to the list \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classcotask_1_1_task_list_a645a656c8d2e8ce3873d418c50435394}\index{TaskList@{TaskList}!pri\_sched@{pri\_sched}}
-\index{pri\_sched@{pri\_sched}!TaskList@{TaskList}}
+\Hypertarget{classcotask_1_1_task_list_a53819d1e25955560b7cb06bd21715966}\index{cotask.TaskList@{cotask.TaskList}!pri\_sched@{pri\_sched}}
+\index{pri\_sched@{pri\_sched}!cotask.TaskList@{cotask.TaskList}}
 \doxysubsubsection{\texorpdfstring{pri\_sched()}{pri\_sched()}}
-{\footnotesize\ttfamily \label{classcotask_1_1_task_list_a645a656c8d2e8ce3873d418c50435394} 
-pri\+\_\+sched (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classcotask_1_1_task_list_a53819d1e25955560b7cb06bd21715966} 
+cotask.\+Task\+List.\+pri\+\_\+sched (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
 
 
 
 Run tasks according to their priorities. 
 
-This scheduler runs tasks in a priority based fashion. Each time it is called, it finds the highest priority task which is ready to run and calls that task\textquotesingle{}s {\ttfamily run()} method. \Hypertarget{classcotask_1_1_task_list_afbe28f6b1f2944805270bba4c813341d}\index{TaskList@{TaskList}!rr\_sched@{rr\_sched}}
-\index{rr\_sched@{rr\_sched}!TaskList@{TaskList}}
+This scheduler runs tasks in a priority based fashion. Each time it is called, it finds the highest priority task which is ready to run and calls that task\textquotesingle{}s {\ttfamily run()} method. \Hypertarget{classcotask_1_1_task_list_aa048a6b12954d03b8fbf78dff7ace907}\index{cotask.TaskList@{cotask.TaskList}!rr\_sched@{rr\_sched}}
+\index{rr\_sched@{rr\_sched}!cotask.TaskList@{cotask.TaskList}}
 \doxysubsubsection{\texorpdfstring{rr\_sched()}{rr\_sched()}}
-{\footnotesize\ttfamily \label{classcotask_1_1_task_list_afbe28f6b1f2944805270bba4c813341d} 
-rr\+\_\+sched (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classcotask_1_1_task_list_aa048a6b12954d03b8fbf78dff7ace907} 
+cotask.\+Task\+List.\+rr\+\_\+sched (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
 
 
 
@@ -90,12 +90,12 @@ Run tasks in order, ignoring the tasks\textquotesingle{} priorities.
 
 This scheduling method runs tasks in a round-\/robin fashion. Each time it is called, it goes through the list of tasks and gives each of them a chance to run. Although this scheduler first runs higher priority tasks first, that has no significant effect in the long run, as all the tasks are given a chance to run each time through the list, and it takes about the same amount of time before each is given a chance to run again. 
 
-\doxysubsection{Field Documentation}
-\Hypertarget{classcotask_1_1_task_list_a8ca5d8931eada8900c68c6f68f7130f1}\index{TaskList@{TaskList}!pri\_list@{pri\_list}}
-\index{pri\_list@{pri\_list}!TaskList@{TaskList}}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcotask_1_1_task_list_aac6e53cb4fec80455198ff85c85a4b51}\index{cotask.TaskList@{cotask.TaskList}!pri\_list@{pri\_list}}
+\index{pri\_list@{pri\_list}!cotask.TaskList@{cotask.TaskList}}
 \doxysubsubsection{\texorpdfstring{pri\_list}{pri\_list}}
-{\footnotesize\ttfamily \label{classcotask_1_1_task_list_a8ca5d8931eada8900c68c6f68f7130f1} 
-pri\+\_\+list = \mbox{[}$\,$\mbox{]}}
+{\footnotesize\ttfamily \label{classcotask_1_1_task_list_aac6e53cb4fec80455198ff85c85a4b51} 
+cotask.\+Task\+List.\+pri\+\_\+list = \mbox{[}$\,$\mbox{]}}
 
 
 

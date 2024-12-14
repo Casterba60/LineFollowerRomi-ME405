@@ -1,5 +1,5 @@
-\doxysection{Encoder Class Reference}
-\hypertarget{classencoder_1_1_encoder}{}\label{classencoder_1_1_encoder}\index{Encoder@{Encoder}}
+\doxysection{encoder.\+Encoder Class Reference}
+\hypertarget{classencoder_1_1_encoder}{}\label{classencoder_1_1_encoder}\index{encoder.Encoder@{encoder.Encoder}}
 
 
 Interface with quadrature encoders.  
@@ -8,40 +8,40 @@ Interface with quadrature encoders.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classencoder_1_1_encoder_a7267f62d73f443ba9484b182fab2c34a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, CHA\+\_\+pin, CHB\+\_\+pin, Enc\+\_\+\+Timer)
+\mbox{\hyperlink{classencoder_1_1_encoder_a21f5b086e295d2a4417e2336bd03dcc6}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, CHA\+\_\+pin, CHB\+\_\+pin, Enc\+\_\+\+Timer)
 \begin{DoxyCompactList}\small\item\em Constructs an encoder object. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classencoder_1_1_encoder_ac55748ac7fd3fa21f34f8cd670458665}{update}} (self, tim=None)
+\mbox{\hyperlink{classencoder_1_1_encoder_a918af8eaddcc63dfe1dc2fe6192084f8}{update}} (self, tim=None)
 \begin{DoxyCompactList}\small\item\em Updates encoder position and delta. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classencoder_1_1_encoder_ae07dc73afeb4ff120c838fe5f53ac883}{get\+\_\+position}} (self)
+\mbox{\hyperlink{classencoder_1_1_encoder_a5e1f45bde021fbdb806bfda8a17ded47}{get\+\_\+position}} (self)
 \begin{DoxyCompactList}\small\item\em Gets the most recent encoder position. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classencoder_1_1_encoder_a825c2bb6fd2330753314946c489d53fa}{get\+\_\+delta}} (self)
+\mbox{\hyperlink{classencoder_1_1_encoder_ac23f2c0b8f93ac800314a2986fda4340}{get\+\_\+delta}} (self)
 \begin{DoxyCompactList}\small\item\em Gets the most recent encoder delta ~\newline
  \end{DoxyCompactList}\item 
-\Hypertarget{classencoder_1_1_encoder_a4c40b8a4d7b7c9fa4a840b4a37acb85b}\label{classencoder_1_1_encoder_a4c40b8a4d7b7c9fa4a840b4a37acb85b} 
+\Hypertarget{classencoder_1_1_encoder_ab79017405d71f96cb2363307a1f04c88}\label{classencoder_1_1_encoder_ab79017405d71f96cb2363307a1f04c88} 
 {\bfseries zero} (self)
 \begin{DoxyCompactList}\small\item\em Resets the encoder position to zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Data Fields}
+\doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classencoder_1_1_encoder_af5742a52e4f01755596b15e4d3ce4203}\label{classencoder_1_1_encoder_af5742a52e4f01755596b15e4d3ce4203} 
+\Hypertarget{classencoder_1_1_encoder_af95622b7268638b27cba784f33b7b658}\label{classencoder_1_1_encoder_af95622b7268638b27cba784f33b7b658} 
 {\bfseries TIM} = Enc\+\_\+\+Timer
 \item 
-\Hypertarget{classencoder_1_1_encoder_abe2ae24a24e37904dc011ec64f768b7c}\label{classencoder_1_1_encoder_abe2ae24a24e37904dc011ec64f768b7c} 
+\Hypertarget{classencoder_1_1_encoder_acadcc39ef88006d93f5daaf3d5c9fdfe}\label{classencoder_1_1_encoder_acadcc39ef88006d93f5daaf3d5c9fdfe} 
 {\bfseries CHA} = self.\+TIM.\+channel(1,pin=CHA\+\_\+pin, mode=Enc\+\_\+\+Timer.\+ENC\+\_\+\+AB)
 \item 
-\Hypertarget{classencoder_1_1_encoder_a284ef0d4e6b22e13960c44eab62edff3}\label{classencoder_1_1_encoder_a284ef0d4e6b22e13960c44eab62edff3} 
+\Hypertarget{classencoder_1_1_encoder_aef8b337cc0c423420f2f8a474c1819e6}\label{classencoder_1_1_encoder_aef8b337cc0c423420f2f8a474c1819e6} 
 {\bfseries CHB} = self.\+TIM.\+channel(2,pin=CHB\+\_\+pin, mode=Enc\+\_\+\+Timer.\+ENC\+\_\+\+AB)
 \item 
-\Hypertarget{classencoder_1_1_encoder_a401e942526aac47cef94f478182486e7}\label{classencoder_1_1_encoder_a401e942526aac47cef94f478182486e7} 
+\Hypertarget{classencoder_1_1_encoder_a8a6c252ededbb8cff1a29c6ef1d70683}\label{classencoder_1_1_encoder_a8a6c252ededbb8cff1a29c6ef1d70683} 
 int {\bfseries position} = 0
 \item 
-\Hypertarget{classencoder_1_1_encoder_ab6d8df8ffd0888ed97f112eac04fb2c0}\label{classencoder_1_1_encoder_ab6d8df8ffd0888ed97f112eac04fb2c0} 
+\Hypertarget{classencoder_1_1_encoder_a190a22d9aa0cd02aff2668537a8a68bd}\label{classencoder_1_1_encoder_a190a22d9aa0cd02aff2668537a8a68bd} 
 int {\bfseries current\+\_\+pos} = 0
 \item 
-\Hypertarget{classencoder_1_1_encoder_acbd08537ee7f241b3e5f36cef6a5af9e}\label{classencoder_1_1_encoder_acbd08537ee7f241b3e5f36cef6a5af9e} 
+\Hypertarget{classencoder_1_1_encoder_aa235f5e8efe4fb406e1f59f6befb1d7e}\label{classencoder_1_1_encoder_aa235f5e8efe4fb406e1f59f6befb1d7e} 
 int {\bfseries last\+\_\+pos} = 0
 \item 
-\Hypertarget{classencoder_1_1_encoder_a1dfcb70b9229f2da17dd5922b87ecf2c}\label{classencoder_1_1_encoder_a1dfcb70b9229f2da17dd5922b87ecf2c} 
+\Hypertarget{classencoder_1_1_encoder_ad3c110d78ce1b5e97ce08efd20b41040}\label{classencoder_1_1_encoder_ad3c110d78ce1b5e97ce08efd20b41040} 
 int {\bfseries delta} = 0
 \end{DoxyCompactItemize}
 
@@ -50,11 +50,11 @@ int {\bfseries delta} = 0
 Interface with quadrature encoders. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classencoder_1_1_encoder_a7267f62d73f443ba9484b182fab2c34a}\index{Encoder@{Encoder}!\_\_init\_\_@{\_\_init\_\_}}
-\index{\_\_init\_\_@{\_\_init\_\_}!Encoder@{Encoder}}
+\Hypertarget{classencoder_1_1_encoder_a21f5b086e295d2a4417e2336bd03dcc6}\index{encoder.Encoder@{encoder.Encoder}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!encoder.Encoder@{encoder.Encoder}}
 \doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
-{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a7267f62d73f443ba9484b182fab2c34a} 
-\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{CHA\+\_\+pin}{, }\item[{}]{CHB\+\_\+pin}{, }\item[{}]{Enc\+\_\+\+Timer}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a21f5b086e295d2a4417e2336bd03dcc6} 
+encoder.\+Encoder.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{CHA\+\_\+pin}{, }\item[{}]{CHB\+\_\+pin}{, }\item[{}]{Enc\+\_\+\+Timer}{}\end{DoxyParamCaption})}
 
 
 
@@ -74,11 +74,11 @@ Constructs an encoder object.
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classencoder_1_1_encoder_a825c2bb6fd2330753314946c489d53fa}\index{Encoder@{Encoder}!get\_delta@{get\_delta}}
-\index{get\_delta@{get\_delta}!Encoder@{Encoder}}
+\Hypertarget{classencoder_1_1_encoder_ac23f2c0b8f93ac800314a2986fda4340}\index{encoder.Encoder@{encoder.Encoder}!get\_delta@{get\_delta}}
+\index{get\_delta@{get\_delta}!encoder.Encoder@{encoder.Encoder}}
 \doxysubsubsection{\texorpdfstring{get\_delta()}{get\_delta()}}
-{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a825c2bb6fd2330753314946c489d53fa} 
-get\+\_\+delta (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_ac23f2c0b8f93ac800314a2986fda4340} 
+encoder.\+Encoder.\+get\+\_\+delta (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
 
 
 
@@ -88,11 +88,11 @@ Gets the most recent encoder delta ~\newline
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-\Hypertarget{classencoder_1_1_encoder_ae07dc73afeb4ff120c838fe5f53ac883}\index{Encoder@{Encoder}!get\_position@{get\_position}}
-\index{get\_position@{get\_position}!Encoder@{Encoder}}
+\Hypertarget{classencoder_1_1_encoder_a5e1f45bde021fbdb806bfda8a17ded47}\index{encoder.Encoder@{encoder.Encoder}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!encoder.Encoder@{encoder.Encoder}}
 \doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
-{\footnotesize\ttfamily \label{classencoder_1_1_encoder_ae07dc73afeb4ff120c838fe5f53ac883} 
-get\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a5e1f45bde021fbdb806bfda8a17ded47} 
+encoder.\+Encoder.\+get\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
 
 
 
@@ -101,11 +101,11 @@ Gets the most recent encoder position.
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-\Hypertarget{classencoder_1_1_encoder_ac55748ac7fd3fa21f34f8cd670458665}\index{Encoder@{Encoder}!update@{update}}
-\index{update@{update}!Encoder@{Encoder}}
+\Hypertarget{classencoder_1_1_encoder_a918af8eaddcc63dfe1dc2fe6192084f8}\index{encoder.Encoder@{encoder.Encoder}!update@{update}}
+\index{update@{update}!encoder.Encoder@{encoder.Encoder}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily \label{classencoder_1_1_encoder_ac55748ac7fd3fa21f34f8cd670458665} 
-update (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{tim}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a918af8eaddcc63dfe1dc2fe6192084f8} 
+encoder.\+Encoder.\+update (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{tim}{ = {\ttfamily None}}\end{DoxyParamCaption})}
 
 
 

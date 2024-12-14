@@ -1,6 +1,6 @@
 var class_line_sensor_1_1_line_sensor =
 [
-    [ "__init__", "class_line_sensor_1_1_line_sensor.html#a2eef6dc14f5b3e2beb43b9af326d14eb", null ],
-    [ "get_value", "class_line_sensor_1_1_line_sensor.html#aabe132f7ac38639bfd0dac75a9c38c9c", null ],
-    [ "update_value", "class_line_sensor_1_1_line_sensor.html#a4a20ecec2cad37001a8b3551f63f0045", null ]
+    [ "__init__", "class_line_sensor_1_1_line_sensor.html#afa58551049f607e7b434eb3f2e63f2df", null ],
+    [ "get_value", "class_line_sensor_1_1_line_sensor.html#ad3f93f339cd5aa28f5315b1e3d49b566", null ],
+    [ "update_value", "class_line_sensor_1_1_line_sensor.html#aaada796095aeb8b4343227843b48bfed", null ]
 ];

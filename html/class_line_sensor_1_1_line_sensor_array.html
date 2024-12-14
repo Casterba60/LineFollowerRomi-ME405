@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ME405 Final Project: LineSensorArray Class Reference</title>
+<title>Line Follower Robot - ME405: LineSensor.LineSensorArray Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ME405 Final Project
+   <div id="projectname">Line Follower Robot - ME405
    </div>
   </td>
  </tr>
@@ -98,8 +98,9 @@ $(function(){initNavTree('class_line_sensor_1_1_line_sensor_array.html',''); ini
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Data Fields</a>  </div>
-  <div class="headertitle"><div class="title">LineSensorArray Class Reference</div></div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="class_line_sensor_1_1_line_sensor_array-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">LineSensor.LineSensorArray Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -108,49 +109,49 @@ $(function(){initNavTree('class_line_sensor_1_1_line_sensor_array.html',''); ini
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a384b4d6227abec6ba9051d4f7eccd9b4" id="r_a384b4d6227abec6ba9051d4f7eccd9b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a384b4d6227abec6ba9051d4f7eccd9b4">__init__</a> (self, Even_pin, Odd_pin, Pin_list)</td></tr>
-<tr class="memdesc:a384b4d6227abec6ba9051d4f7eccd9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_line_sensor_1_1_line_sensor_array.html" title="Class for an array of line sensor objects.">LineSensorArray</a> object by setting up an array of line sensor object.  <br /></td></tr>
-<tr class="separator:a384b4d6227abec6ba9051d4f7eccd9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f637a1988d9d38558869a5920d5d824" id="r_a9f637a1988d9d38558869a5920d5d824"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f637a1988d9d38558869a5920d5d824">get_line_position</a> (self)</td></tr>
-<tr class="separator:a9f637a1988d9d38558869a5920d5d824"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0565eecb5e431630081a6ed0f440abc" id="r_ad0565eecb5e431630081a6ed0f440abc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0565eecb5e431630081a6ed0f440abc">update_line_position</a> (self)</td></tr>
-<tr class="separator:ad0565eecb5e431630081a6ed0f440abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63d63e49b7e1d2b568412e48acaf5715" id="r_a63d63e49b7e1d2b568412e48acaf5715"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63d63e49b7e1d2b568412e48acaf5715">threshold_linear</a> (self, sensor_reading, sensor)</td></tr>
-<tr class="separator:a63d63e49b7e1d2b568412e48acaf5715"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea18af444930d78a1d4855accab74926" id="r_aea18af444930d78a1d4855accab74926"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea18af444930d78a1d4855accab74926">third_order</a> (self, x, a, b, c, d)</td></tr>
-<tr class="separator:aea18af444930d78a1d4855accab74926"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac9384d4a6c42439b76f2aceb6a6ce01" id="r_aac9384d4a6c42439b76f2aceb6a6ce01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac9384d4a6c42439b76f2aceb6a6ce01">linearize</a> (self, value, sensor)</td></tr>
-<tr class="separator:aac9384d4a6c42439b76f2aceb6a6ce01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad54792d41f5676ee4038be95d0482e5d" id="r_ad54792d41f5676ee4038be95d0482e5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad54792d41f5676ee4038be95d0482e5d">threshold</a> (self, linear_reading)</td></tr>
-<tr class="separator:ad54792d41f5676ee4038be95d0482e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a161cafd55645730c0af4e889cdc9c8d1" id="r_a161cafd55645730c0af4e889cdc9c8d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a161cafd55645730c0af4e889cdc9c8d1">centroid</a> (self, readings)</td></tr>
-<tr class="separator:a161cafd55645730c0af4e889cdc9c8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a346f4f3dc663d6b73a34ed20dc87c9" id="r_a1a346f4f3dc663d6b73a34ed20dc87c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a346f4f3dc663d6b73a34ed20dc87c9">__init__</a> (self, Even_pin, Odd_pin, Pin_list)</td></tr>
+<tr class="memdesc:a1a346f4f3dc663d6b73a34ed20dc87c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="class_line_sensor_1_1_line_sensor_array.html" title="Class for an array of line sensor objects.">LineSensorArray</a> object by setting up an array of line sensor object.  <br /></td></tr>
+<tr class="separator:a1a346f4f3dc663d6b73a34ed20dc87c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8bd732a284e702c055b0dd0b569a49e" id="r_ae8bd732a284e702c055b0dd0b569a49e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8bd732a284e702c055b0dd0b569a49e">get_line_position</a> (self)</td></tr>
+<tr class="separator:ae8bd732a284e702c055b0dd0b569a49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae8aa1081f9c0bdcc7f2788abf63917" id="r_afae8aa1081f9c0bdcc7f2788abf63917"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afae8aa1081f9c0bdcc7f2788abf63917">update_line_position</a> (self)</td></tr>
+<tr class="separator:afae8aa1081f9c0bdcc7f2788abf63917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e9fbaf4b4fed0d5dc2fb40dfc78801" id="r_a86e9fbaf4b4fed0d5dc2fb40dfc78801"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86e9fbaf4b4fed0d5dc2fb40dfc78801">threshold_linear</a> (self, sensor_reading, sensor)</td></tr>
+<tr class="separator:a86e9fbaf4b4fed0d5dc2fb40dfc78801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bcb9ab1b83b1985998d8185cb04d05d" id="r_a4bcb9ab1b83b1985998d8185cb04d05d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bcb9ab1b83b1985998d8185cb04d05d">third_order</a> (self, x, a, b, c, d)</td></tr>
+<tr class="separator:a4bcb9ab1b83b1985998d8185cb04d05d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7adade61e31e9d2c3d908123e073ddc9" id="r_a7adade61e31e9d2c3d908123e073ddc9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7adade61e31e9d2c3d908123e073ddc9">linearize</a> (self, value, sensor)</td></tr>
+<tr class="separator:a7adade61e31e9d2c3d908123e073ddc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01c6e6c21b175fe338911b3df862c8d" id="r_ae01c6e6c21b175fe338911b3df862c8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae01c6e6c21b175fe338911b3df862c8d">threshold</a> (self, linear_reading)</td></tr>
+<tr class="separator:ae01c6e6c21b175fe338911b3df862c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5827d134cdd2129ddabc07fda519045a" id="r_a5827d134cdd2129ddabc07fda519045a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5827d134cdd2129ddabc07fda519045a">centroid</a> (self, readings)</td></tr>
+<tr class="separator:a5827d134cdd2129ddabc07fda519045a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Data Fields</h2></td></tr>
-<tr class="memitem:a96cad8f33b37886726a9ef851cc8e014" id="r_a96cad8f33b37886726a9ef851cc8e014"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96cad8f33b37886726a9ef851cc8e014">SENSOR_LIST</a></td></tr>
-<tr class="separator:a96cad8f33b37886726a9ef851cc8e014"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7539efd224683108210221739b02973a" id="r_a7539efd224683108210221739b02973a"><td class="memItemLeft" align="right" valign="top"><a id="a7539efd224683108210221739b02973a" name="a7539efd224683108210221739b02973a"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a09375096b7bf873e9d87ee1294a317cc" id="r_a09375096b7bf873e9d87ee1294a317cc"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09375096b7bf873e9d87ee1294a317cc">SENSOR_LIST</a></td></tr>
+<tr class="separator:a09375096b7bf873e9d87ee1294a317cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff92c5eda6eba754435b35504df303b" id="r_a2ff92c5eda6eba754435b35504df303b"><td class="memItemLeft" align="right" valign="top"><a id="a2ff92c5eda6eba754435b35504df303b" name="a2ff92c5eda6eba754435b35504df303b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>LINE_POSITION</b> = 0</td></tr>
-<tr class="separator:a7539efd224683108210221739b02973a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabcddb6cf84ada3cc34693f26ee73bf8" id="r_aabcddb6cf84ada3cc34693f26ee73bf8"><td class="memItemLeft" align="right" valign="top"><a id="aabcddb6cf84ada3cc34693f26ee73bf8" name="aabcddb6cf84ada3cc34693f26ee73bf8"></a>
+<tr class="separator:a2ff92c5eda6eba754435b35504df303b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f7f2e140eeb4d5f34a6c6c9783784f" id="r_aa5f7f2e140eeb4d5f34a6c6c9783784f"><td class="memItemLeft" align="right" valign="top"><a id="aa5f7f2e140eeb4d5f34a6c6c9783784f" name="aa5f7f2e140eeb4d5f34a6c6c9783784f"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>NUM_SENSORS</b> = 8</td></tr>
-<tr class="separator:aabcddb6cf84ada3cc34693f26ee73bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3217823ad1e9ae328d595d0a524c3ef0" id="r_a3217823ad1e9ae328d595d0a524c3ef0"><td class="memItemLeft" align="right" valign="top"><a id="a3217823ad1e9ae328d595d0a524c3ef0" name="a3217823ad1e9ae328d595d0a524c3ef0"></a>
+<tr class="separator:aa5f7f2e140eeb4d5f34a6c6c9783784f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83235eac6f78d03d7594ecfda5022b75" id="r_a83235eac6f78d03d7594ecfda5022b75"><td class="memItemLeft" align="right" valign="top"><a id="a83235eac6f78d03d7594ecfda5022b75" name="a83235eac6f78d03d7594ecfda5022b75"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>ALL_ON_PERCENT</b> = 0.85</td></tr>
-<tr class="separator:a3217823ad1e9ae328d595d0a524c3ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a83235eac6f78d03d7594ecfda5022b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for an array of line sensor objects. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a384b4d6227abec6ba9051d4f7eccd9b4" name="a384b4d6227abec6ba9051d4f7eccd9b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a384b4d6227abec6ba9051d4f7eccd9b4">&#9670;&#160;</a></span>__init__()</h2>
+<a id="a1a346f4f3dc663d6b73a34ed20dc87c9" name="a1a346f4f3dc663d6b73a34ed20dc87c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a346f4f3dc663d6b73a34ed20dc87c9">&#9670;&#160;</a></span>__init__()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">__init__ </td>
+          <td class="memname">LineSensor.LineSensorArray.__init__ </td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
         </tr>
@@ -185,14 +186,14 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>ALL_ON_PERCENT</b> =
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a161cafd55645730c0af4e889cdc9c8d1" name="a161cafd55645730c0af4e889cdc9c8d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a161cafd55645730c0af4e889cdc9c8d1">&#9670;&#160;</a></span>centroid()</h2>
+<a id="a5827d134cdd2129ddabc07fda519045a" name="a5827d134cdd2129ddabc07fda519045a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5827d134cdd2129ddabc07fda519045a">&#9670;&#160;</a></span>centroid()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">centroid </td>
+          <td class="memname">LineSensor.LineSensorArray.centroid </td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
         </tr>
@@ -209,14 +210,14 @@ Returns a value between -1 and 1.
 </pre> 
 </div>
 </div>
-<a id="a9f637a1988d9d38558869a5920d5d824" name="a9f637a1988d9d38558869a5920d5d824"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f637a1988d9d38558869a5920d5d824">&#9670;&#160;</a></span>get_line_position()</h2>
+<a id="ae8bd732a284e702c055b0dd0b569a49e" name="ae8bd732a284e702c055b0dd0b569a49e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8bd732a284e702c055b0dd0b569a49e">&#9670;&#160;</a></span>get_line_position()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">get_line_position </td>
+          <td class="memname">LineSensor.LineSensorArray.get_line_position </td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
           <td></td>
@@ -227,14 +228,14 @@ Returns a value between -1 and 1.
 </pre> 
 </div>
 </div>
-<a id="aac9384d4a6c42439b76f2aceb6a6ce01" name="aac9384d4a6c42439b76f2aceb6a6ce01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac9384d4a6c42439b76f2aceb6a6ce01">&#9670;&#160;</a></span>linearize()</h2>
+<a id="a7adade61e31e9d2c3d908123e073ddc9" name="a7adade61e31e9d2c3d908123e073ddc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7adade61e31e9d2c3d908123e073ddc9">&#9670;&#160;</a></span>linearize()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">linearize </td>
+          <td class="memname">LineSensor.LineSensorArray.linearize </td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
         </tr>
@@ -256,14 +257,14 @@ Not fully implemented.
 </pre> 
 </div>
 </div>
-<a id="aea18af444930d78a1d4855accab74926" name="aea18af444930d78a1d4855accab74926"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea18af444930d78a1d4855accab74926">&#9670;&#160;</a></span>third_order()</h2>
+<a id="a4bcb9ab1b83b1985998d8185cb04d05d" name="a4bcb9ab1b83b1985998d8185cb04d05d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bcb9ab1b83b1985998d8185cb04d05d">&#9670;&#160;</a></span>third_order()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">third_order </td>
+          <td class="memname">LineSensor.LineSensorArray.third_order </td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
         </tr>
@@ -300,14 +301,14 @@ Was going to be used for more specific linearization of the line sensors but end
 </pre> 
 </div>
 </div>
-<a id="ad54792d41f5676ee4038be95d0482e5d" name="ad54792d41f5676ee4038be95d0482e5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad54792d41f5676ee4038be95d0482e5d">&#9670;&#160;</a></span>threshold()</h2>
+<a id="ae01c6e6c21b175fe338911b3df862c8d" name="ae01c6e6c21b175fe338911b3df862c8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae01c6e6c21b175fe338911b3df862c8d">&#9670;&#160;</a></span>threshold()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">threshold </td>
+          <td class="memname">LineSensor.LineSensorArray.threshold </td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
         </tr>
@@ -324,14 +325,14 @@ Scale is 0 -&gt; line sensor MAX_DECAY_TIME
 </pre> 
 </div>
 </div>
-<a id="a63d63e49b7e1d2b568412e48acaf5715" name="a63d63e49b7e1d2b568412e48acaf5715"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63d63e49b7e1d2b568412e48acaf5715">&#9670;&#160;</a></span>threshold_linear()</h2>
+<a id="a86e9fbaf4b4fed0d5dc2fb40dfc78801" name="a86e9fbaf4b4fed0d5dc2fb40dfc78801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86e9fbaf4b4fed0d5dc2fb40dfc78801">&#9670;&#160;</a></span>threshold_linear()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">threshold_linear </td>
+          <td class="memname">LineSensor.LineSensorArray.threshold_linear </td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
         </tr>
@@ -353,14 +354,14 @@ Scale is 0 -&gt; line sensor MAX_DECAY_TIME
 </pre> 
 </div>
 </div>
-<a id="ad0565eecb5e431630081a6ed0f440abc" name="ad0565eecb5e431630081a6ed0f440abc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0565eecb5e431630081a6ed0f440abc">&#9670;&#160;</a></span>update_line_position()</h2>
+<a id="afae8aa1081f9c0bdcc7f2788abf63917" name="afae8aa1081f9c0bdcc7f2788abf63917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afae8aa1081f9c0bdcc7f2788abf63917">&#9670;&#160;</a></span>update_line_position()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">update_line_position </td>
+          <td class="memname">LineSensor.LineSensorArray.update_line_position </td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
           <td></td>
@@ -377,15 +378,15 @@ In the event that most of the sensors detect strongly (a horizontal line is dete
 </pre> 
 </div>
 </div>
-<h2 class="groupheader">Field Documentation</h2>
-<a id="a96cad8f33b37886726a9ef851cc8e014" name="a96cad8f33b37886726a9ef851cc8e014"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96cad8f33b37886726a9ef851cc8e014">&#9670;&#160;</a></span>SENSOR_LIST</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a09375096b7bf873e9d87ee1294a317cc" name="a09375096b7bf873e9d87ee1294a317cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09375096b7bf873e9d87ee1294a317cc">&#9670;&#160;</a></span>SENSOR_LIST</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">list SENSOR_LIST</td>
+          <td class="memname">list LineSensor.LineSensorArray.SENSOR_LIST</td>
         </tr>
       </table>
 </div><div class="memdoc">

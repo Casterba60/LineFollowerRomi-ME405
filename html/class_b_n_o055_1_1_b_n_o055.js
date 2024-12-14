@@ -1,13 +1,13 @@
 var class_b_n_o055_1_1_b_n_o055 =
 [
-    [ "_read_byte", "class_b_n_o055_1_1_b_n_o055.html#af594284eae550a6e4ab9ff7004259071", null ],
-    [ "_set_mode", "class_b_n_o055_1_1_b_n_o055.html#a20e8e73601ce6bcded2f8ba795ce5d57", null ],
-    [ "_write_byte", "class_b_n_o055_1_1_b_n_o055.html#a80827d67b5f37e25648cf046322e1451", null ],
-    [ "get_angular_velocity", "class_b_n_o055_1_1_b_n_o055.html#acd46bcb63c260b8f73328ed2881f637d", null ],
-    [ "get_calibration_status", "class_b_n_o055_1_1_b_n_o055.html#aba227d4dc3ef4be7fbbd1a4a42e8b3cb", null ],
-    [ "get_calibration_status_values", "class_b_n_o055_1_1_b_n_o055.html#a65c36a8ac62c4f0fea0001b4f5f36b7e", null ],
-    [ "get_euler_angles", "class_b_n_o055_1_1_b_n_o055.html#a862ee411e3e07e4baf89103431361a99", null ],
-    [ "get_heading", "class_b_n_o055_1_1_b_n_o055.html#ab15280644fb5f947335b805300d86d7e", null ],
-    [ "read_calibration_data", "class_b_n_o055_1_1_b_n_o055.html#ae2cfe6d53b821c739755ecd0dfce6eec", null ],
-    [ "write_calibration_data", "class_b_n_o055_1_1_b_n_o055.html#a03fa8ba205552edf04a92bd35fa85061", null ]
+    [ "_read_byte", "class_b_n_o055_1_1_b_n_o055.html#a525e52ba0d99e75c101cdc73b2c21202", null ],
+    [ "_set_mode", "class_b_n_o055_1_1_b_n_o055.html#a6c6cd9263ca86366dec5ea1e51e5d1af", null ],
+    [ "_write_byte", "class_b_n_o055_1_1_b_n_o055.html#a9e97159f7adf76de7ef322fdb9072613", null ],
+    [ "get_angular_velocity", "class_b_n_o055_1_1_b_n_o055.html#a46040d75d5bc327dd72ce4027f10fdc9", null ],
+    [ "get_calibration_status", "class_b_n_o055_1_1_b_n_o055.html#a1029908eedb2f26283c11cf9ad815bfc", null ],
+    [ "get_calibration_status_values", "class_b_n_o055_1_1_b_n_o055.html#a1072573fc56b1fb1e7c28e6003d4eb9c", null ],
+    [ "get_euler_angles", "class_b_n_o055_1_1_b_n_o055.html#ac8b2aea790050e80b9f1fada2a0897e5", null ],
+    [ "get_heading", "class_b_n_o055_1_1_b_n_o055.html#a8bdbb693347273698be2aa68f8f80b66", null ],
+    [ "read_calibration_data", "class_b_n_o055_1_1_b_n_o055.html#ae512296bd37daf44e4c1db1559f66219", null ],
+    [ "write_calibration_data", "class_b_n_o055_1_1_b_n_o055.html#a12bb618980997c6186e177c57c42a7ad", null ]
 ];
